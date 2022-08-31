@@ -32,7 +32,7 @@
                 <cenc:pssh>AAAAOHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABgSEOIqLIeng0y4hT74/ejDTbJI49yVmwY=</cenc:pssh>
             </ContentProtection>
             <Representation id="3" frameRate="50" bandwidth="7749988" codecs="avc1.640029" mimeType="video/mp4" sar="1:1" height="1080" width="1920">
-                <BaseURL>video-init.mp4</BaseURL>
+                <BaseURL>video-init.aa</BaseURL>
                 <SegmentBase indexRange="1621-3092" timescale="12800">
                     <Initialization range="0-1620"/>
                 </SegmentBase>
