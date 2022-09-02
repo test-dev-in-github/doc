@@ -5,7 +5,7 @@
             <AdSystem>Dice</AdSystem>
             <AdTitle>Test Preroll</AdTitle>
             <Description>
-                <![CDATA[Test preroll]]>
+                <![CDATA[Test Preroll]]>
             </Description>
             <Creatives>
                 <Creative id="57859154776" sequence="1">
@@ -14,14 +14,6 @@
                         <MediaFiles>
                             <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
                                 <![CDATA[https://test-dev-in-github.github.io/doc/output000.mp4]]>
-                            </MediaFile>
-                        </MediaFiles>
-                    </Linear>
-                    <Linear>
-                        <Duration>00:00:10</Duration>
-                        <MediaFiles>
-                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
-                                <![CDATA[https://test-dev-in-github.github.io/doc/output010.mp4]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
