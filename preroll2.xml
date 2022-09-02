@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+    <Ad id="697203496">
+        <InLine>
+            <AdSystem>GDFP</AdSystem>
+            <AdTitle>External NCA1C1L1 Linear Inline</AdTitle>
+            <Description>
+                <![CDATA[External NCA1C1L1 Linear Inline ad]]>
+            </Description>
+            <Error>
+                <![CDATA[https://pubads.g.doubleclick.net/pagead/interaction/?ai=BfFXkBKARY6acGMie8ALgkq_4B_DYj-sGAAAAEAEgqN27JjgBWNjGssXXAWCd0dSBsAW6AQo3Mjh4OTBfeG1syAEFwAIC4AIA6gIlLzEyNDMxOTA5Ni9leHRlcm5hbC9zaW5nbGVfYWRfc2FtcGxlc_gCgdIegAMBkAOwCZgDrAKoAwHgBAHSBQYQqPa5zAKQBgGgBiOoB5oGqAfz0RuoB5bYG6gHqpuxAqgH35-xAtgHAeAHAdIIDwiAYRABGB0yAooCOgKAQNgIAoAKBZgLAdAVAfgWAYAXAQ&sigh=lYQzJce7LdM&label=videoplayfailed[ERRORCODE]]]>
+            </Error>
+            <Impression>
+                <![CDATA[https://securepubads.g.doubleclick.net/pcs/view?xai=AKAOjstqRtc26D7Z8nLfVZON6wdGSKETUVNInk1vJDDtLeTE8eaC-jAK3qaRpp4rKgyjAfUgk_cBJGZXi5yxUxgND7hRnkwCLFJsoyyW5zETIUqu5FR9Morm5Dgwpz69qpvPoeWptSK_dT1whBIG5kD7Q0ZktA3eu4b87JHbU0NAjm8bmhvu80HT89HCEI9FWRQ1LQd4p9dxmCfufZAuDFdn1i5HVoOheGeLKyE9CH5MnH5hOmf7hHHOCRIKS2qDMXWp7mh9OL2gCyAhJNapUnbqLqgw5sGS7mPCFb8ghRmPU6TMJ_fIqmkuL0-sxVvXuyg&sai=AMfl-YRrs2cT6FQYaAwXwKryln-oLJH6aKlD7deyN9oLIBaaeXDxPJGlq-4lWZCkeC6edXtP8H5q7VjmUVNcxI13q7zPi8m-RzO78K8YJg&sig=Cg0ArKJSzJq9P2YE6GWMEAE&uach_m=[UACH]&adurl=]]>
+            </Impression>
+            <Creatives>
+                <Creative id="57859154776" sequence="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <MediaFiles>
+                            <MediaFile id="GDFP" delivery="progressive" width="1280" height="720" type="video/mp4" bitrate="450" scalable="true" maintainAspectRatio="true">
+                                <![CDATA[https://test-dev-in-github.github.io/doc/output000.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
