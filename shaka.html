@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Shaka Player compiled library: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/2.5.23/shaka-player.compiled.js"></script>
+</head>
+
+<body>
+    <video id="video" width="640" poster="//shaka-player-demo.appspot.com/assets/poster.jpg" controls muted
+        autoplay></video>
+</body>
+<script>
+    // myapp.js
+
+    const manifestUri =
+        'http://172.16.0.237/examples/chopper/hls_fmp4_wv_pr/dash/chicago.mp4.mpd';
+
+    function initApp() {
+        // Install built-in polyfills to patch browser incompatibilities.
+        shaka.polyfill.installAll();
+
+        // Check to see if the browser supports the basic APIs Shaka needs.
+        if (shaka.Player.isBrowserSupported()) {
+            // Everything looks good!
+            initPlayer();
+        } else {
+            // This browser does not have the minimum set of APIs we need.
+            console.error('Browser not supported!');
+        }
+    }
+
+    async function initPlayer(tryPlayready = false) {
+        // Create a Player instance.
+        const video = document.getElementById('video');
+        const player = new shaka.Player(video);
+        
+        const config  = {
+            drm: {
+                servers: {
+                    'com.widevine.alpha': 'https://shield-twoproxy-qa.imggaming.com/proxy',
+                    'com.microsoft.playready': 'https://shield-twoproxy-qa.imggaming.com/rightsmanager.asmx'
+                }
+            }
+        };
+        if (tryPlayready) {
+            delete config.drm.servers['com.widevine.alpha'];
+        }
+
+        player.configure(config);
+        player.getNetworkingEngine().registerRequestFilter(function (type, request) {
+            if (type == shaka.net.NetworkingEngine.RequestType.LICENSE) {
+                request.headers['Authorization'] = 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGMiOmZhbHNlLCJhaWQiOiJ0ZXN0X2FjY291bnRfaWQ2NyIsImF1ZCI6ImNvbS5saW9uLnRlc3RfY2xpZW50IiwiY2lkIjoibmw6dGVzdGNsaWVudDoxIiwiZGlkIjoidGVzdF9kZXZpY2VfaWQiLCJzbHYiOiJkZWJ1ZyIsImp0aSI6IjRmMDZiYjYwLTNjZmMtNDIxMS1hZmJiLWQ5MjA0OTE1NGVhZCIsImVpZCI6Imhsc19mbXA0X3d2X3ByX3Rlc3QyIiwiZXhwIjoxNjk0MjQzNTI4LCJpYXQiOjE2NjI3MDc1MjgsImRlZiI6ImhkIn0.OiUBq0YfrflupVw9o46ApPO3NvtkFU2TG8cMvVOdwLA'
+            };
+        });
+
+        // Attach player to the window to make it easy to access in the JS console.
+        window.player = player;
+
+        // Listen for error events.
+        player.addEventListener('error', onErrorEvent);
+
+        // Try to load a manifest.
+        // This is an asynchronous process.
+        try {
+            await player.load(manifestUri);
+            // This runs if the asynchronous load is successful.
+            console.log('The video has now been loaded!');
+        } catch (e) {
+            // onError is executed if the asynchronous load fails.
+            onError(e);
+        }
+    }
+
+    function onErrorEvent(event) {
+        // Extract the shaka.util.Error object from the event.
+        onError(event.detail);
+    }
+
+    function onError(error) {
+        // Log the error.
+        console.error('Error code', error.code, 'object', error);
+        if (error.code === 6007) {
+            initPlayer(true);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initApp);
+</script>
+
+</html>
