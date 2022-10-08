@@ -1,0 +1,206 @@
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd">
+	<Ad id="1233" sequence="3">
+		<InLine>
+			<AdSystem>MOL</AdSystem>
+			<AdTitle>VAST ad buffet</AdTitle>
+			<Error>
+				<![CDATA[https://test.example.com/error]]>
+			</Error>
+			<Impression>
+				<![CDATA[https://test.example.com/impression]]>
+			</Impression>
+			<Creatives>
+				<Creative>
+					<Linear skipoffset="00:00:05.000">
+						<Duration>00:00:15</Duration>
+						<TrackingEvents>
+							<Tracking event="complete">
+								<![CDATA[https://test.example.com/complete]]>
+							</Tracking>
+							<Tracking event="firstQuartile">
+								<![CDATA[https://test.example.com/firstquartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[https://test.example.com/midpoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[https://test.example.com/thirdQuartile]]>
+							</Tracking>
+							<Tracking event="skip">
+								<![CDATA[
+http://ad.server.com/skip/dot.gif
+]]>
+							</Tracking>
+							<Tracking event="progress" offset="00:00:2.000">
+								<![CDATA[
+http://ad.server.com/view.gif
+]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking>
+								<![CDATA[https://test.example.com/clicktracking]]>
+							</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+    <Ad id="1234" sequence="1">
+		<InLine>
+			<AdSystem>MOL</AdSystem>
+			<AdTitle>VAST ad buffet</AdTitle>
+			<Error>
+				<![CDATA[https://test.example.com/error]]>
+			</Error>
+			<Impression>
+				<![CDATA[https://test.example.com/impression]]>
+			</Impression>
+			<Creatives>
+				<Creative>
+					<Linear skipoffset="00:00:05.000">
+						<Duration>00:00:15</Duration>
+						<TrackingEvents>
+							<Tracking event="complete">
+								<![CDATA[https://test.example.com/complete]]>
+							</Tracking>
+							<Tracking event="firstQuartile">
+								<![CDATA[https://test.example.com/firstquartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[https://test.example.com/midpoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[https://test.example.com/thirdQuartile]]>
+							</Tracking>
+							<Tracking event="skip">
+								<![CDATA[
+http://ad.server.com/skip/dot.gif
+]]>
+							</Tracking>
+							<Tracking event="progress" offset="00:00:2.000">
+								<![CDATA[
+http://ad.server.com/view.gif
+]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking>
+								<![CDATA[https://test.example.com/clicktracking]]>
+							</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+    <Ad id="1235" sequence="2">
+		<InLine>
+			<AdSystem>MOL</AdSystem>
+			<AdTitle>VAST ad buffet</AdTitle>
+			<Error>
+				<![CDATA[https://test.example.com/error]]>
+			</Error>
+			<Impression>
+				<![CDATA[https://test.example.com/impression]]>
+			</Impression>
+			<Creatives>
+				<Creative>
+					<Linear skipoffset="00:00:05.000">
+						<Duration>00:00:15</Duration>
+						<TrackingEvents>
+							<Tracking event="complete">
+								<![CDATA[https://test.example.com/complete]]>
+							</Tracking>
+							<Tracking event="firstQuartile">
+								<![CDATA[https://test.example.com/firstquartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[https://test.example.com/midpoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[https://test.example.com/thirdQuartile]]>
+							</Tracking>
+							<Tracking event="skip">
+								<![CDATA[
+http://ad.server.com/skip/dot.gif
+]]>
+							</Tracking>
+							<Tracking event="progress" offset="00:00:2.000">
+								<![CDATA[
+http://ad.server.com/view.gif
+]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking>
+								<![CDATA[https://test.example.com/clicktracking]]>
+							</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+    <Ad id="1236" sequence="4">
+		<InLine>
+			<AdSystem>MOL</AdSystem>
+			<AdTitle>VAST ad buffet</AdTitle>
+			<Error>
+				<![CDATA[https://test.example.com/error]]>
+			</Error>
+			<Impression>
+				<![CDATA[https://test.example.com/impression]]>
+			</Impression>
+			<Creatives>
+				<Creative>
+					<Linear skipoffset="00:00:05.000">
+						<Duration>00:00:15</Duration>
+						<TrackingEvents>
+							<Tracking event="complete">
+								<![CDATA[https://test.example.com/complete]]>
+							</Tracking>
+							<Tracking event="firstQuartile">
+								<![CDATA[https://test.example.com/firstquartile]]>
+							</Tracking>
+							<Tracking event="midpoint">
+								<![CDATA[https://test.example.com/midpoint]]>
+							</Tracking>
+							<Tracking event="thirdQuartile">
+								<![CDATA[https://test.example.com/thirdQuartile]]>
+							</Tracking>
+							<Tracking event="skip">
+								<![CDATA[
+http://ad.server.com/skip/dot.gif
+]]>
+							</Tracking>
+							<Tracking event="progress" offset="00:00:2.000">
+								<![CDATA[
+http://ad.server.com/view.gif
+]]>
+							</Tracking>
+						</TrackingEvents>
+						<VideoClicks>
+							<ClickTracking>
+								<![CDATA[https://test.example.com/clicktracking]]>
+							</ClickTracking>
+						</VideoClicks>
+						<MediaFiles>
+							<MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+						</MediaFiles>
+					</Linear>
+				</Creative>
+			</Creatives>
+		</InLine>
+	</Ad>
+</VAST>
