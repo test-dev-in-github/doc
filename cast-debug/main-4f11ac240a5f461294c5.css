@@ -1,0 +1,4117 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body,
+input,
+textarea,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes appear-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ds-icon {
+  fill: white;
+}
+
+.stats-modal {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-family: sans-serif;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  opacity: 0.4;
+  transition: opacity 0.12s ease;
+  z-index: 2147483648;
+}
+.stats-modal:hover, .stats-modal.always-show {
+  opacity: 1;
+}
+.stats-modal__chart {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 150px;
+  margin-bottom: 5px;
+}
+.stats-modal svg {
+  fill: none;
+  stroke: #0f0;
+}
+.stats-modal h3 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.stats-modal .stats-container {
+  overflow-y: auto;
+  margin-bottom: 0.7em;
+}
+.stats-modal .stats-container pre {
+  margin-bottom: 0.5em;
+}
+.stats-modal .stats-container::-webkit-scrollbar {
+  height: 3px;
+  width: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.stats-modal .stats-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset -1 0 0px rgba(0, 27, 45, 0.9);
+}
+.stats-modal .stats-container::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.stats-modal .stats-close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.ds-parent {
+  position: relative;
+}
+.ds-parent video {
+  display: block;
+}
+
+.ds-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.ds-container *::after,
+.ds-container *::before {
+  box-sizing: initial;
+}
+
+.ds-overlay {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  cursor: none;
+  overflow: hidden;
+}
+.ds-overlay--hover {
+  cursor: auto;
+}
+.ds-ad-ui .ds-overlay * {
+  z-index: 3;
+}
+
+.ds-play-pause {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.12s ease-in;
+}
+.ds-loading .ds-play-pause {
+  opacity: 0;
+}
+.ds-control-bar .ds-play-pause {
+  width: 40px;
+  height: 40px;
+}
+.ds-control-bar .ds-play-pause .ds-icon--pause,
+.ds-control-bar .ds-play-pause .ds-icon--replay {
+  margin-top: -20px;
+}
+.ds-play-pause--big-centered {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40px, -40px);
+  border-radius: 80px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.ds-play-pause--big-centered .ds-icon--pause,
+.ds-play-pause--big-centered .ds-icon--replay {
+  margin-top: -40px;
+}
+.ds-play-pause .ds-icon--play,
+.ds-play-pause .ds-icon--pause,
+.ds-play-pause .ds-icon--replay {
+  transition: transform 0.2s ease-in-out;
+}
+.ds-play-pause .ds-icon--play {
+  width: 44%;
+  margin-left: 8%;
+}
+.ds-play-pause .ds-icon--pause {
+  width: 40%;
+}
+.ds-play-pause .ds-icon--replay {
+  width: 50%;
+}
+.ds-play-pause.ds-paused {
+  opacity: 1;
+}
+.ds-play-pause.ds-paused .ds-icon--pause {
+  transform: scale(0);
+}
+.ds-play-pause.ds-paused .ds-icon--replay {
+  transform: scale(0);
+}
+.ds-play-pause.ds-paused .ds-icon--play {
+  transform: scale(1);
+}
+.ds-overlay--hover .ds-play-pause.ds-playing {
+  opacity: 1;
+}
+.ds-play-pause.ds-playing .ds-icon--pause {
+  transform: scale(1);
+}
+.ds-play-pause.ds-playing .ds-icon--play {
+  transform: scale(0);
+}
+.ds-play-pause.ds-playing .ds-icon--replay {
+  transform: scale(0);
+}
+.ds-play-pause.ds-ended .ds-icon--pause {
+  transform: scale(0);
+}
+.ds-play-pause.ds-ended .ds-icon--play {
+  transform: scale(0);
+}
+.ds-play-pause.ds-ended .ds-icon--replay {
+  transform: scale(1);
+}
+
+.ds-control-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.12s ease-in, transform 0.12s ease-in;
+  opacity: 0;
+  transform: translateY(16px);
+}
+.ds-control-bar .ds-control-bar__gradient {
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 25%, rgba(0, 0, 0, 0) 90%);
+  backdrop-filter: blur(1px);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.ds-overlay--hover .ds-control-bar, .ds-control-bar--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ds-control-bar__section {
+  display: flex;
+  height: 100%;
+}
+.ds-control-bar__section--main {
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.ds-menu {
+  position: relative;
+  cursor: pointer;
+  padding: 0 5px;
+  height: 100%;
+  user-select: none;
+}
+.ds-menu__content {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.12s ease-in, transform 0.12s ease-in;
+  will-change: opacity, transform;
+}
+.ds-menu__content--compat {
+  display: table;
+}
+.ds-menu__content--compat .ds-menu__section {
+  display: table-cell;
+}
+.ds-menu.ds-menu--with-check .ds-menu__item {
+  flex-direction: row;
+}
+.ds-menu.ds-menu--with-check .ds-icon--check {
+  height: 12px;
+  margin-right: 6px;
+}
+.ds-menu.ds-menu--audio .ds-menu__content {
+  right: -20px;
+}
+.ds-menu.ds-menu--multi-levels .ds-menu__content {
+  flex-direction: row;
+}
+.ds-menu .ds-menu__heading {
+  margin-left: 40px;
+  padding: 5px;
+  cursor: default;
+  text-transform: capitalize;
+}
+.ds-menu__item {
+  font-size: 16px;
+  font-weight: 100;
+  white-space: nowrap;
+  padding: 0.4em 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ds-menu__item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.ds-menu__item-label {
+  text-align: left;
+  width: 100%;
+}
+.ds-menu__item-active {
+  width: 24px;
+  height: 16px;
+  padding: 0 0.4em;
+}
+.ds-menu__item-active svg {
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.ds-menu__item-is-active svg {
+  opacity: 1;
+}
+.ds-menu__icon {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.ds-menu__icon .ds-icon {
+  width: 20px;
+  height: 20px;
+}
+.ds-menu__icon .ds-icon--text-tracks {
+  height: 25px;
+  width: 25px;
+}
+.ds-menu__icon .ds-icon--cog {
+  transform: rotate(0deg);
+  transition: transform 0.12s ease;
+}
+.ds-menu:hover .ds-menu__content, .ds-menu.ds-menu--active .ds-menu__content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.ds-menu:hover .ds-icon--cog, .ds-menu.ds-menu--active .ds-icon--cog {
+  transform: rotate(30deg);
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.ds-settings {
+  position: relative;
+}
+.ds-settings .ds-menu__icon .ds-icon {
+  transition: transform 0.2s ease;
+}
+.ds-settings.ds-settings--open .ds-menu__icon .ds-icon {
+  transform: rotate(40deg);
+}
+.ds-settings:hover .ds-menu__icon .ds-icon {
+  cursor: pointer;
+}
+.ds-settings button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ds-settings-menu {
+  min-width: 260px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  will-change: opacity, transform;
+  pointer-events: none;
+  scrollbar-color: rgba(255, 255, 255, 0.25) rgba(0, 0, 0, 0.85);
+}
+.ds-settings-menu * {
+  box-sizing: border-box;
+  user-select: none;
+}
+.ds-settings-menu .icon {
+  fill: #fff;
+  height: 100%;
+}
+.ds-settings-menu .ds-settings-menu__content {
+  opacity: 0;
+  transition: transform 0.2s ease-in;
+}
+.ds-settings-menu::-webkit-scrollbar {
+  width: 10px;
+}
+.ds-settings-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+.ds-settings-menu--open {
+  opacity: 1;
+  transform: translateY(-24px);
+  pointer-events: auto;
+}
+.ds-settings-menu--open .ds-settings-menu__content {
+  opacity: 1;
+}
+.ds-settings-menu .ds-settings-menu__sub-menu {
+  transform: translateX(260px);
+}
+.ds-settings-menu .ds-settings-menu__sub-menu .ds-settings-menu__item:not(.ds-settings-menu__item-space) {
+  justify-content: start;
+}
+.ds-settings-menu .ds-settings-menu__active-item {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}
+.ds-settings-menu--item-selected .ds-settings-menu__menu-items {
+  display: none;
+}
+.ds-settings-menu--item-selected .ds-settings-menu__content {
+  transform: translateX(-260px);
+}
+.ds-settings-menu .ds-settings-menu__heading,
+.ds-settings-menu .ds-settings-menu__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 12px;
+  height: 40px;
+  text-align: left;
+}
+.ds-settings-menu .ds-settings-menu__heading {
+  font-size: 13px;
+  height: 50px;
+  border-bottom: 0.5px solid #484646;
+}
+.ds-settings-menu .ds-settings-menu__heading .icon-wrapper {
+  margin-right: 4px;
+  padding-top: 2px;
+}
+.ds-settings-menu .ds-settings-menu__heading .icon {
+  height: 24px;
+}
+.ds-settings-menu .ds-settings-menu__heading-space {
+  justify-content: space-between;
+}
+.ds-settings-menu .ds-settings-menu__nav-back {
+  display: flex;
+  align-items: center;
+}
+.ds-settings-menu .ds-settings-menu__item {
+  justify-content: space-between;
+  width: 100%;
+}
+.ds-settings-menu .ds-settings-menu__item .icon {
+  height: 20px;
+}
+.ds-settings-menu .ds-settings-menu__item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.ds-settings-menu .ds-settings-menu__multi {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ds-settings-menu .ds-settings-menu__multi > div {
+  min-width: 130px;
+}
+.ds-settings-menu .ds-settings-menu__multi .ds-settings-menu__item {
+  justify-content: center;
+}
+.ds-settings-menu .ds-settings-menu__sub-heading {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 12px;
+  border-bottom: 0.5px solid #484646;
+  justify-content: center;
+}
+
+.ds-loader {
+  width: 83px;
+  height: 83px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-41.5px, -41.5px);
+  position: relative;
+  pointer-events: none;
+  transition: opacity 0.12s ease-in-out;
+  will-change: opacity;
+  opacity: 0;
+}
+.ds-loader.ds-waiting {
+  opacity: 1;
+}
+.ds-loader::before {
+  width: 77px;
+  height: 77px;
+  display: block;
+  content: " ";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  border-radius: 83px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+  animation: 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite spin;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ds-button {
+  cursor: pointer;
+  padding: 0 5px;
+}
+.ds-control-bar .ds-button {
+  width: 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-control-bar .ds-button .ds-icon {
+  width: 60%;
+}
+.ds-button.ds-fullscreen .ds-icon--exit-fullscreen,
+.ds-button.ds-fullscreen .ds-icon--enter-fullscreen {
+  transition: transform 0.2s ease-out;
+}
+.ds-button.ds-fullscreen:hover .ds-icon--enter-fullscreen {
+  transform: scale(1.25);
+  transition: transform 0.5s cubic-bezier(0.76, -0.44, 0.09, 1.63);
+}
+.ds-button.ds-fullscreen:hover .ds-icon--exit-fullscreen {
+  animation: 0.3s ease-out 1 condense forwards;
+}
+.ds-button svg {
+  fill: #fff;
+}
+.ds-button:hover svg, .ds-button:active svg, .ds-button:focus svg {
+  fill: #fff;
+}
+
+@keyframes condense {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.ds-seek-bar {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+.ds-seek-bar .ds-seek-bar__ad {
+  background-color: #ff0;
+}
+.ds-seek-bar .ds-seek-bar__ad.ds-seek-bar__ad--watched {
+  background-color: transparent;
+}
+
+.ds-seek-bar__progress-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ds-slider__root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  /* For mobile devices change hover behaviour */
+}
+.ds-slider__root.ds-slider__draggable {
+  cursor: pointer;
+}
+.ds-slider__root:hover .ds-slider__slider-hover,
+.ds-slider__root:hover .ds-slider__tooltip-container, .ds-slider__root.ds-slider__scrubbing .ds-slider__slider-hover,
+.ds-slider__root.ds-slider__scrubbing .ds-slider__tooltip-container {
+  opacity: 1;
+}
+.ds-slider__root:hover .ds-slider__shy-scrubber, .ds-slider__root.ds-slider__scrubbing .ds-slider__shy-scrubber {
+  transform: scale(1);
+}
+@media (hover: none) {
+  .ds-slider__root:hover:not(.ds-slider__scrubbing) .ds-slider__slider-hover,
+.ds-slider__root:hover:not(.ds-slider__scrubbing) .ds-slider__tooltip-container {
+    opacity: 0;
+  }
+  .ds-slider__root .ds-slider__shy-scrubber {
+    transform: scale(1);
+  }
+}
+
+.ds-slider__slider,
+.ds-slider__slider-hover,
+.ds-slider__slider-background {
+  position: absolute;
+}
+
+.ds-slider__slider,
+.ds-slider__scrubber,
+.ds-slider__shy-scrubber,
+.ds-slider__tooltip-label,
+.ds-slider__tooltip-label::before {
+  background-color: #fff;
+}
+
+.ds-slider__slider-background,
+.ds-slider__slider-hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ds-slider__slider-hover {
+  opacity: 0;
+  transition: opacity 0.12s;
+  will-change: transform, opacity;
+}
+
+.ds-slider__scrubber-container {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  will-change: transform;
+}
+
+.ds-slider__shy-scrubber, .ds-slider__scrubber {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.ds-slider__shy-scrubber {
+  transform: scale(0);
+  transition: transform 0.12s;
+}
+
+.ds-slider__tooltip-container {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.12s;
+  will-change: transform, opacity;
+}
+
+.ds-slider__tooltip-label {
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  padding: 2px 8px 4px;
+  position: absolute;
+  pointer-events: none;
+}
+.ds-slider__tooltip-label::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.ds-slider__tooltip-label span {
+  z-index: 1;
+}
+
+.ds-slider__tooltip-image {
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+.ds-slider__tooltip-image > img {
+  display: block;
+}
+
+.ds-slider__marker-container {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ds-slider__marker {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.ds-slider__horizontal .ds-slider__slider,
+.ds-slider__horizontal .ds-slider__slider-hover,
+.ds-slider__vertical .ds-slider__slider,
+.ds-slider__vertical .ds-slider__slider-hover {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.ds-slider__horizontal-reversed .ds-slider__slider,
+.ds-slider__horizontal-reversed .ds-slider__slider-hover,
+.ds-slider__vertical-reversed .ds-slider__slider,
+.ds-slider__vertical-reversed .ds-slider__slider-hover {
+  transform-origin: 100% 100%;
+  will-change: transform;
+}
+
+.ds-slider__horizontal.ds-slider__root,
+.ds-slider__horizontal-reversed.ds-slider__root {
+  flex-direction: column;
+}
+.ds-slider__horizontal .ds-slider__slider,
+.ds-slider__horizontal .ds-slider__slider-hover,
+.ds-slider__horizontal .ds-slider__slider-background,
+.ds-slider__horizontal-reversed .ds-slider__slider,
+.ds-slider__horizontal-reversed .ds-slider__slider-hover,
+.ds-slider__horizontal-reversed .ds-slider__slider-background {
+  width: 100%;
+  height: 4px;
+}
+.ds-slider__horizontal .ds-slider__scrubber-container,
+.ds-slider__horizontal-reversed .ds-slider__scrubber-container {
+  left: -6px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-container,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-container {
+  height: 12px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-label,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-label {
+  bottom: 0;
+  transform: translate(-50%, -19px);
+}
+.ds-slider__horizontal .ds-slider__tooltip-label::before,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-label::before {
+  left: 50%;
+  bottom: -5px;
+  margin-left: -5px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image,
+.ds-slider__horizontal .ds-slider__tooltip-icon,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-icon {
+  width: 240px;
+  transform: translate(-50%, -52px);
+}
+.ds-slider__horizontal .ds-slider__tooltip-icon,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-icon {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  text-align: center;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image {
+  bottom: 0;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image > img,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image > img {
+  width: 100%;
+}
+.ds-slider__horizontal .ds-slider__marker-container,
+.ds-slider__horizontal-reversed .ds-slider__marker-container {
+  height: 4px;
+  width: 100%;
+}
+.ds-slider__horizontal .ds-slider__marker,
+.ds-slider__horizontal-reversed .ds-slider__marker {
+  height: 100%;
+  padding: 0 2px;
+  margin: 0 -2px;
+}
+
+.ds-slider__vertical.ds-slider__root,
+.ds-slider__vertical-reversed.ds-slider__root {
+  flex-direction: row;
+}
+.ds-slider__vertical .ds-slider__slider,
+.ds-slider__vertical .ds-slider__slider-hover,
+.ds-slider__vertical .ds-slider__slider-background,
+.ds-slider__vertical-reversed .ds-slider__slider,
+.ds-slider__vertical-reversed .ds-slider__slider-hover,
+.ds-slider__vertical-reversed .ds-slider__slider-background {
+  height: 100%;
+  width: 4px;
+}
+.ds-slider__vertical .ds-slider__scrubber-container,
+.ds-slider__vertical-reversed .ds-slider__scrubber-container {
+  top: -6px;
+}
+.ds-slider__vertical .ds-slider__tooltip-container,
+.ds-slider__vertical-reversed .ds-slider__tooltip-container {
+  width: 12px;
+}
+.ds-slider__vertical .ds-slider__tooltip-label,
+.ds-slider__vertical-reversed .ds-slider__tooltip-label {
+  right: 0;
+  transform: translate(-19px, -50%);
+}
+.ds-slider__vertical .ds-slider__tooltip-label::before,
+.ds-slider__vertical-reversed .ds-slider__tooltip-label::before {
+  top: 50%;
+  right: -5px;
+  margin-top: -5px;
+}
+.ds-slider__vertical .ds-slider__tooltip-image,
+.ds-slider__vertical-reversed .ds-slider__tooltip-image {
+  height: 140px;
+  right: 0;
+  transform: translate(-92px, -50%);
+}
+.ds-slider__vertical .ds-slider__tooltip-image > img,
+.ds-slider__vertical-reversed .ds-slider__tooltip-image > img {
+  height: 100%;
+}
+.ds-slider__vertical .ds-slider__marker-container,
+.ds-slider__vertical-reversed .ds-slider__marker-container {
+  height: 100%;
+  width: 4px;
+}
+.ds-slider__vertical .ds-slider__marker,
+.ds-slider__vertical-reversed .ds-slider__marker {
+  width: 100%;
+  padding: 2px 0;
+  margin: -2px 0;
+}
+
+.ds-live-label,
+.ds-time-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 13px;
+}
+
+.ds-live-label {
+  font-size: 16px;
+  font-weight: 100;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.ds-live-label--with-dot::before {
+  content: " ";
+  background: red;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  margin-right: 6px;
+}
+.ds-live-label--no-seek {
+  cursor: default;
+}
+
+.ds-icon__volume-muted, .ds-icon__volume-low, .ds-icon__volume-mid, .ds-icon__volume-high {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.12s ease-in-out;
+  will-change: opacity, transform;
+}
+.ds-icon__volume-low, .ds-icon__volume-mid, .ds-icon__volume-high {
+  transform: translateX(-3px);
+}
+.ds-icon__volume--high .ds-icon__volume-low,
+.ds-icon__volume--high .ds-icon__volume-mid,
+.ds-icon__volume--high .ds-icon__volume-high {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ds-icon__volume--mid .ds-icon__volume-low,
+.ds-icon__volume--mid .ds-icon__volume-mid {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ds-icon__volume--low .ds-icon__volume-low {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ds-icon__volume--muted .ds-icon__volume-muted {
+  opacity: 1;
+}
+
+.ds-volume {
+  cursor: pointer;
+}
+.ds-volume .ds-menu__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.ds-volume__slider-container {
+  height: 100px;
+}
+
+.meter-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: calc(100% - 4px);
+  background: linear-gradient(to bottom, #ff3d3d 0%, #f9ef31 35%, #8df731 100%);
+  border: 2px solid #000;
+  opacity: 0.7;
+}
+
+#meter {
+  background: black;
+}
+
+.ds-parent video::-webkit-media-text-track-container {
+  overflow: visible;
+  transform: translateY(-10%);
+}
+
+.ds-text-track {
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50px;
+  pointer-events: none;
+  user-select: none;
+}
+@media (max-width: 768px) {
+  .ds-text-track {
+    font-size: 1.25rem;
+  }
+}
+.ds-text-track .ds-text-track__wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  max-width: 80%;
+}
+@media (max-width: 768px) {
+  .ds-text-track .ds-text-track__wrapper {
+    max-width: 90%;
+  }
+}
+.ds-text-track .ds-text-track__text {
+  display: block;
+  padding: 1px 2px;
+}
+
+.ds-casting video {
+  filter: blur(5px);
+}
+.ds-casting__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ds-casting .ds-casting-title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 200px;
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+}
+
+.ds-icon--cast-connecting {
+  position: relative;
+}
+.ds-icon--cast-connecting .ds-icon--cast-state-zero,
+.ds-icon--cast-connecting .ds-icon--cast-state-one,
+.ds-icon--cast-connecting .ds-icon--cast-state-two {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+}
+.ds-icon--cast-connecting .ds-icon--cast-state-zero {
+  opacity: 1;
+}
+.ds-icon--cast-connecting .ds-icon--cast-state-one,
+.ds-icon--cast-connecting .ds-icon--cast-state-two {
+  animation-duration: 1.5s;
+  animation-name: one;
+  animation-iteration-count: infinite;
+}
+.ds-icon--cast-connecting .ds-icon--cast-state-one {
+  animation-name: cast-pulse-one;
+}
+.ds-icon--cast-connecting .ds-icon--cast-state-two {
+  animation-name: cast-pulse-two;
+}
+
+@keyframes cast-pulse-one {
+  40%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes cast-pulse-two {
+  80%, 100% {
+    opacity: 1;
+  }
+}
+.ds-replay-player {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.ds-replay-player video {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0);
+  transition: filter 400ms ease-out;
+}
+
+.ds-replay-parent {
+  z-index: 1;
+  transition: transform 400ms ease-out;
+}
+
+.ds-container {
+  z-index: 2;
+}
+.ds-ad-playing .ds-container {
+  z-index: auto;
+}
+
+.ds-replay-playing.ds-replay-player video {
+  filter: none;
+}
+
+.ds-icon--instant-replay {
+  height: 20px;
+  fill: #fff;
+}
+
+.ds-replay-player-title {
+  transform: translateX(-100%);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 9001;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  height: 60px;
+  min-width: 240px;
+  backdrop-filter: Blur(8px);
+  background: rgba(29, 29, 29, 0.4);
+  border-radius: 0 5px 5px 0;
+}
+.ds-replay-player-title .replay-progress {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  --replay-half-after: transform (30s/2) linear;
+  --replay-half-one-after: (30s/2);
+}
+.ds-replay-player-title .replay-progress:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+}
+.ds-replay-player-title .replay-progress .replay-half {
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  overflow: hidden;
+}
+.ds-replay-player-title .replay-progress .replay-half:after {
+  content: " ";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  transform-origin: center center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 40px;
+  transform: rotate(45deg);
+}
+.ds-replay-player-title .replay-progress .replay-half-one {
+  top: 0;
+  right: 0;
+}
+.ds-replay-player-title .replay-progress .replay-half-one:after {
+  border-color: #fff #fff transparent transparent;
+  left: -20px;
+  top: 0;
+}
+.ds-replay-player-title .replay-progress .replay-half-two {
+  top: 0;
+  left: 0;
+}
+.ds-replay-player-title .replay-progress .replay-half-two:after {
+  border-color: transparent transparent #fff #fff;
+  left: 0;
+  top: 0;
+}
+.ds-replay-player-title .replay-progress span {
+  font-size: 15px;
+  margin-left: 2px;
+}
+.ds-replay-player-title .replay-half:after {
+  border-color: red;
+}
+.ds-replay-player-title__showing {
+  transform: translateX(0);
+}
+.ds-replay-player-title__showing .replay-progress .replay-half:after {
+  transition: var(--replay-half-after);
+  transform: rotate(-135deg);
+}
+.ds-replay-player-title__showing .replay-progress .replay-half-one:after {
+  transition-delay: var(--replay-half-one-after);
+}
+
+.ds-replay-live-label {
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.55);
+  font-size: 16px;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  display: none;
+  position: absolute;
+}
+
+.ds-replay-wrapper-playing {
+  position: absolute;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.7);
+  z-index: 100001;
+  transition: all 0.6s ease;
+  will-change: right, bottom, width, height;
+}
+.ds-replay-wrapper-playing video {
+  height: 100% !important;
+  width: 100% !important;
+}
+.ds-replay-wrapper-playing .ds-replay-live-label {
+  display: block;
+}
+
+:root {
+  --ds-audio-bg-color: #171717;
+  --ds-audio-slider-main: #fff;
+  --ds-audio-volume-slider-bg: #5c5c5c;
+  --ds-audio-font-color: #fff;
+  --ds-audio-font-color-alt: rgba(255, 255, 255, 0.8);
+  --ds-audio-lang-border: rgba(255, 255, 255, 0.3);
+  --ds-audio-thumbnail-border: #514f50;
+  --ds-audio-modal-overlay: rgba(0, 0, 0, 0.7);
+}
+
+.ds-audio-only {
+  position: relative;
+  background-color: var(--ds-audio-bg-color);
+  user-select: none;
+  padding: 18px;
+}
+.ds-audio-only .ds-loader {
+  position: absolute;
+}
+.ds-audio-only .ds-loader::before {
+  top: -3px;
+  left: -5px;
+}
+.ds-audio-only.ds-audio-only--light {
+  --ds-audio-bg-color: #fff;
+  --ds-audio-slider-main: #171717;
+  --ds-audio-font-color: #171717;
+  --ds-audio-thumbnail-border: transparent;
+  --ds-audio-volume-slider-bg: #dbcfcf;
+  --ds-audio-font-color-alt: rgba(0, 0, 0, 0.6);
+  --ds-audio-lang-border: rgba(0, 0, 0, 0.3);
+  --ds-audio-modal-overlay: rgba(255, 255, 255, 0.7);
+}
+.ds-audio-only .ds-audio-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: background-color 0.3s ease-in;
+}
+.ds-audio-only .ds-audio-overlay.ds-audio-overlay--in {
+  z-index: 1;
+  background-color: var(--ds-audio-modal-overlay);
+}
+.ds-audio-only .ds-thumbnail__play {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  pointer-events: none;
+}
+.ds-audio-only .ds-thumbnail__play.ds-thumbnail__play--ready {
+  opacity: 1;
+  pointer-events: all;
+}
+.ds-audio-only .ds-thumbnail__schedule {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+.ds-audio-only .ds-thumbnail__time {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.ds-audio-only .ds-audio-controls {
+  display: flex;
+}
+.ds-audio-only .ds-audio-labels {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.ds-audio-only .ds-audio-labels--ready {
+  margin-top: 1.2rem;
+  margin-bottom: 24px;
+}
+.ds-audio-only .ds-audio-title {
+  color: var(--ds-audio-font-color);
+  font-size: 1.2rem;
+}
+.ds-audio-only .ds-audio-volume-lang {
+  display: flex;
+  align-items: center;
+}
+.ds-audio-only .ds-audio-volume-lang.ds-audio-volume-lang--readonly .ds-volume {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  width: 100%;
+}
+.ds-audio-only .ds-audio-volume-lang.ds-audio-volume-lang--readonly .ds-icon__volume {
+  height: 32px;
+  width: 32px;
+}
+.ds-audio-only .ds-audio-volume-lang .ds-icon {
+  fill: var(--ds-audio-font-color);
+}
+.ds-audio-only .ds-audio-volume-lang .ds-volume {
+  padding: 0;
+  width: 200px;
+  margin-right: 80px;
+}
+.ds-audio-only .ds-audio-volume-lang .ds-volume .ds-menu__content {
+  bottom: -13px;
+  height: auto;
+  left: 36px;
+  background-color: transparent;
+}
+.ds-audio-only .ds-slider__slider-background {
+  background-color: var(--ds-audio-volume-slider-bg);
+}
+.ds-audio-only .ds-slider__slider,
+.ds-audio-only .ds-slider__scrubber,
+.ds-audio-only .ds-slider__shy-scrubber,
+.ds-audio-only .ds-slider__tooltip-label,
+.ds-audio-only .ds-slider__tooltip-label::before {
+  background-color: var(--ds-audio-slider-main);
+}
+.ds-audio-only .ds-slider__tooltip-label {
+  color: var(--ds-audio-bg-color);
+}
+.ds-audio-only .ds-live-label {
+  border-radius: 3px;
+  color: #fff;
+  background-color: #cf3536;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 16px 0 0;
+}
+.ds-audio-only .ds-thumbnail-wrapper {
+  display: inline-block;
+}
+.ds-audio-only .ds-thumbnail {
+  border-radius: 3px;
+  border: 1px solid var(--ds-audio-thumbnail-border);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 105px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+.ds-audio-only .ds-menu {
+  text-transform: uppercase;
+}
+.ds-audio-only .ds-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  user-select: none;
+}
+.ds-audio-only .ds-image img,
+.ds-audio-only .ds-image .ds-image__placeholder {
+  transition: background-color 0.4s ease-in;
+}
+.ds-audio-only .ds-image .ds-image__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #171717;
+  max-height: 240px;
+}
+.ds-audio-only .ds-image.ds-image--ready img {
+  opacity: 1;
+}
+.ds-audio-only .ds-image.ds-image--ready .ds-image__placeholder {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.ds-audio-only .ds-image img {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in;
+}
+.ds-audio-only .ds-image .ds-image__placeholder {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ds-audio-only .ds-audio-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-menu__label {
+  text-transform: uppercase;
+  color: var(--ds-audio-font-color-alt);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  margin-right: 12px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-menu__current-track {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--ds-audio-font-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+  min-width: 160px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-menu__current-track .ds-btn-flex {
+  display: flex;
+  align-items: center;
+}
+.ds-audio-only .ds-audio-menu .ds-icon--caret-down {
+  fill: var(--ds-audio-font-color);
+  width: 24px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal {
+  width: 250px;
+  height: 105px;
+  border-radius: 6px;
+  border: 1px solid var(--ds-audio-lang-border);
+  background-color: var(--ds-audio-bg-color);
+  position: absolute;
+  bottom: -6px;
+  left: -50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  overflow: hidden;
+  z-index: 2;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--large {
+  width: 480px;
+  left: -270px;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--large {
+    width: 330px;
+    left: -58px;
+  }
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal .ds-audio-modal-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal .ds-audio-modal-carousel__arrow {
+  width: 30px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal .ds-audio-modal-carousel__arrow svg {
+  fill: currentColor;
+  width: 26px;
+  position: relative;
+  top: 1px;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-audio-menu .ds-audio-modal {
+    left: -25%;
+  }
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(1) {
+  animation-delay: 20ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(2) {
+  animation-delay: 40ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(3) {
+  animation-delay: 60ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(4) {
+  animation-delay: 80ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(5) {
+  animation-delay: 100ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal.ds-audio-modal--active .ds-audio-modal__options button:nth-child(6) {
+  animation-delay: 120ms;
+  animation-name: slide-in;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--ds-audio-font-color-alt);
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  padding: 0px 8px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal .ds-audio-active-track {
+  color: var(--ds-audio-font-color);
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal--carousel .ds-audio-modal-carousel__arrow {
+  display: flex;
+  justify-content: center;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal-carousel__arrow--hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal__close {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal__close .ds-icon--close {
+  fill: var(--ds-audio-font-color-alt);
+  width: 16px;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal__title {
+  text-transform: uppercase;
+  color: var(--ds-audio-font-color-alt);
+  font-size: 0.65rem;
+  text-align: center;
+  display: block;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-active-track,
+.ds-audio-only .ds-audio-menu .ds-audio-modal__options button:hover {
+  color: var(--ds-audio-font-color);
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal__options,
+.ds-audio-only .ds-audio-menu .ds-audio-modal__content-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal--large.ds-audio-modal--carousel .ds-audio-modal__content-wrapper {
+  justify-content: space-between;
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal--large.ds-audio-modal--carousel .ds-audio-modal__options {
+  justify-content: start;
+  padding: 0 2px;
+  width: 83%;
+  overflow: hidden;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-audio-menu .ds-audio-modal--large.ds-audio-modal--carousel .ds-audio-modal__options {
+    padding: 0px 16px;
+  }
+}
+.ds-audio-only .ds-audio-menu .ds-audio-modal--large.ds-audio-modal--carousel .ds-audio-modal__options button:first-child {
+  padding-left: 0;
+}
+.ds-audio-only .ds-countdown {
+  display: flex;
+  color: #fff;
+}
+.ds-audio-only .ds-countdown__item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+  align-items: center;
+}
+.ds-audio-only .ds-countdown__value {
+  background-color: #514f50;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 30px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.ds-audio-only .ds-countdown__label {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ds-audio-font-color);
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-countdown {
+    justify-content: center;
+  }
+}
+.ds-audio-only .ds-marquee {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  z-index: -1;
+}
+.ds-audio-only .ds-marquee .ds-marquee__content {
+  color: var(--ds-audio-font-color);
+  transition: transform 10s linear;
+}
+.ds-audio-only .ds-marquee .ds-marquee__scroll {
+  animation: ds-marquee 20s linear infinite;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-marquee .ds-marquee__scroll {
+    animation: ds-marquee-small 15s linear infinite;
+  }
+}
+.ds-audio-only .ds-play-pause-morph {
+  bottom: auto;
+  left: auto;
+  right: auto;
+  height: 70px;
+  width: 70px;
+  margin-top: 3px;
+  position: relative;
+  transform: translateX(-4px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.ds-audio-only .ds-play-pause-morph:before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  content: " ";
+  width: 30px;
+  height: 40px;
+  border-right: 0 solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 9px solid #fff;
+  transform: scaleY(0.85);
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+.ds-audio-only .ds-play-pause-morph:after {
+  box-sizing: border-box;
+  position: absolute;
+  left: 28px;
+  top: 20px;
+  content: " ";
+  width: 10px;
+  height: 20px;
+  border-right: 0 solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 9px solid #fff;
+  transform: scaleY(1.7) translateX(5px);
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+.ds-audio-only .ds-play-pause-morph.ds-play-pause-morph--paused {
+  transform: translateX(0);
+}
+.ds-audio-only .ds-play-pause-morph.ds-play-pause-morph--paused:before {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid #fff;
+  transform: scaleY(1);
+}
+.ds-audio-only .ds-play-pause-morph.ds-play-pause-morph--paused:after {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  transform: scaleY(1) translateX(0);
+}
+.ds-audio-only .ds-audio-labels {
+  max-width: 500px;
+  overflow: hidden;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-audio-labels {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.ds-audio-only .ds-play-pause-wrapper {
+  border: 4px solid #fff;
+  border-radius: 100%;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 26%;
+  top: 12%;
+  background-color: rgba(255, 255, 255, 0.125);
+}
+.ds-audio-only .ds-play-pause-morph {
+  left: 11px;
+  top: 3px;
+}
+.ds-audio-only .ds-audio-seek {
+  color: var(--ds-audio-font-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+.ds-audio-only .ds-audio-seek .ds-seek-bar {
+  margin-left: -1px;
+}
+.ds-audio-only .ds-audio-seek__time {
+  min-width: 40px;
+}
+.ds-audio-only .ds-audio-seek__time:last-child {
+  text-align: right;
+}
+@media (max-width: 720px) {
+  .ds-audio-only .ds-audio-volume-lang,
+.ds-audio-only .ds-audio-labels,
+.ds-audio-only .ds-audio-controls {
+    flex-direction: column;
+  }
+  .ds-audio-only .ds-thumbnail-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .ds-audio-only .ds-thumbnail {
+    margin: auto;
+  }
+  .ds-audio-only .ds-live-label,
+.ds-audio-only .ds-volume {
+    margin-bottom: 1rem;
+  }
+  .ds-audio-only .ds-audio-seek {
+    margin-top: 15px;
+  }
+  .ds-audio-only .ds-audio-title {
+    text-align: center;
+  }
+}
+
+.ds-ad-ui .ds-ad__info {
+  padding: 1.5em 1.8em;
+  border-radius: 3px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  top: 2rem;
+  right: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  pointer-events: none;
+}
+.ds-ad-ui .ds-ad__info .ds-icon {
+  height: 13px;
+}
+.ds-ad-ui .ds-ad-container {
+  display: none;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+.ds-ad-playing .ds-ad-ui .ds-ad-container, .ds-ad-ui .ds-ad-container.ds-ad-playing {
+  display: block;
+  z-index: auto;
+}
+.ds-ad-ui iframe {
+  height: calc(100% - 40px) !important;
+  width: 100% !important;
+}
+
+.ds-ad-container {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  right: 0;
+  top: 85%;
+  height: 40px;
+  width: 150px;
+}
+.ds-ad-playing .ds-ad-container, .ds-ad-container.ds-ad-playing {
+  z-index: 3;
+}
+.ds-ad-container.ds-ad-container--csai {
+  z-index: auto;
+}
+.ds-ad-container.ds-ad-container--csai > div {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.ds-ad__info {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.75em 1.5em;
+  display: none;
+  position: absolute;
+  top: 85%;
+  margin-left: 6px;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.ds-ad__info--in {
+  display: inline-flex;
+  align-items: center;
+}
+.ds-ad__info-label {
+  margin-right: 6px;
+}
+.ds-ad__info .ds-icon {
+  height: 18px;
+  fill: #fff;
+}
+.ds-ad__info.ds-ad__progress {
+  user-select: none;
+}
+.ds-ad__info.ds-ad__progress .ds-ad__progress-delimiter {
+  margin: 0 6px 0 0;
+}
+
+.ds-error-modal-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.ds-error-modal-overlay * {
+  box-sizing: border-box;
+}
+.ds-error-modal-overlay .ds-error-modal {
+  background-color: #fff;
+  border-radius: 3px;
+  width: 60%;
+  text-align: center;
+  opacity: 0;
+}
+.ds-error-modal-overlay .ds-error-modal ::selection {
+  color: #fff;
+  background-color: #d50000;
+}
+.ds-error-modal-overlay .ds-error-modal__ok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  flex-direction: column;
+}
+.ds-error-modal-overlay .ds-error-modal__ok > span {
+  margin-right: 6px;
+}
+.ds-error-modal-overlay .ds-error-modal__ok .ds-icon {
+  fill: #fff;
+  height: 50px;
+  background: #00c853;
+  border-radius: 100%;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.ds-error-modal-overlay .ds-error-modal__heading {
+  color: #fff;
+  background-color: #d50000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+.ds-error-modal-overlay .ds-error-modal__heading button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  height: 40px;
+  width: 40px;
+}
+.ds-error-modal-overlay .ds-error-modal__heading--ok {
+  background-color: #00c853;
+}
+.ds-error-modal-overlay .ds-error-modal__message {
+  border: 1px solid #f2f2f2;
+  padding: 2px 6px;
+  overflow-y: hidden;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.ds-error-modal-overlay .ds-error-modal__message:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+.ds-error-modal-overlay .ds-error-modal__timestamp {
+  font-size: 0.7rem;
+  color: #555;
+  text-transform: capitalize;
+  margin-right: 6px;
+}
+.ds-error-modal-overlay .ds-error-modal__content {
+  font-size: 1rem;
+  padding: 16px;
+  text-transform: capitalize;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+.ds-error-modal-overlay .ds-error-modal__footer {
+  padding: 0 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__clear,
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy {
+  border: 0;
+  background-color: #e0e0e0;
+  color: #000;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 3px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__clear:hover, .ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__clear:active,
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy:hover,
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy:active {
+  background-color: #d5d5d5;
+}
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy {
+  background-color: #43a047;
+  color: #fff;
+}
+.ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy:hover, .ds-error-modal-overlay .ds-error-modal__footer .ds-error-modal__copy:active {
+  background-color: #2e7d32;
+}
+.ds-error-modal-overlay--in {
+  pointer-events: all;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.ds-error-modal-overlay--in .ds-error-modal {
+  animation: appear-in 0.3s forwards;
+}
+
+.ds-annotations-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 48px;
+}
+
+.ds-annotations {
+  position: relative;
+  left: 54px;
+  width: calc(100% - 100px);
+  min-height: 60px;
+}
+.ds-annotations__rail {
+  height: 1px;
+  background-color: hsla(0deg, 0%, 100%, 0.3);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.ds-annotations__text {
+  color: #fff;
+  font-size: 14px;
+  padding: 3px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+.ds-annotations__neutral {
+  font-size: 12px;
+  top: 30%;
+}
+.ds-annotations__away, .ds-annotations__home {
+  left: -48px;
+}
+.ds-annotations__away {
+  top: 66.7777%;
+}
+.ds-annotations__annotation-away .ds-annotations__component {
+  transform: translateY(34px);
+}
+.ds-annotations__component {
+  display: flex;
+  align-items: center;
+  width: 1.125rem;
+  height: 1.25rem;
+  font-weight: 600;
+}
+.ds-annotations__annotation {
+  position: absolute;
+  transition: right 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ds-annotations__annotation:hover {
+  cursor: pointer;
+}
+.ds-annotations__annotation:hover .ds-annotations__label {
+  opacity: 1;
+  transform: translateY(-60px);
+}
+.ds-annotations__annotation-away .ds-annotations__annotation:hover .ds-annotations__label {
+  transform: translateY(-45px);
+}
+.ds-annotations__annotation-live {
+  right: 0;
+}
+.ds-annotations__label {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+  border-radius: 3px;
+  position: absolute;
+  font-size: 0.8rem;
+  opacity: 0;
+  min-width: 120px;
+  transform: translateY(-50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+}
+.ds-annotations__annotation-away .ds-annotations__label {
+  transform: translateY(-35px);
+}
+
+.ds-tooltip {
+  position: relative;
+}
+.ds-tooltip__label {
+  background-color: #1c1c1c;
+  border-radius: 2px;
+  color: #fff;
+  padding: 5px 9px;
+  text-align: center;
+  position: absolute;
+  font-size: 0.8rem;
+  opacity: 0;
+  min-width: 60px;
+  transition: opacity 0.1s ease-in;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 2;
+}
+.ds-tooltip:hover .ds-tooltip__label {
+  opacity: 1;
+}
+.ds-tooltip--top .ds-tooltip__label {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  transform: translateX(-50%);
+}
+.ds-tooltip--right .ds-tooltip__label {
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+}
+.ds-tooltip--left .ds-tooltip__label {
+  top: 50%;
+  right: 100%;
+  margin-right: 10px;
+  transform: translateY(-50%);
+}
+.ds-tooltip--bottom .ds-tooltip__label {
+  top: 100%;
+  left: 50%;
+  margin-top: 10px;
+  transform: translateX(-50%);
+}
+
+.ds-context-menu {
+  background-color: rgba(28, 28, 28, 0.9);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+  text-align: left;
+  user-select: none;
+  width: 250px;
+  z-index: 2147483648;
+}
+.ds-context-menu--in {
+  opacity: 1;
+  pointer-events: all;
+}
+.ds-context-menu__item {
+  padding: 6px 12px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ds-context-menu__item:not(.ds-context-menu__label):hover {
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+.ds-context-menu__item-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ds-context-menu__item-icon .ds-icon {
+  position: absolute;
+  height: 13px;
+  right: 12px;
+  fill: #fff;
+}
+
+.ds-break-status {
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 13px;
+  padding: 0.75em 1.5em;
+}
+
+.ds-break-status-container {
+  transition: transform 0.12s ease-in;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  pointer-events: none;
+}
+.ds-break-status-container.ds-break-status-container__overlay-active {
+  transform: translateY(-40px);
+}
+.ds-ad-playing .ds-break-status-container {
+  z-index: 3;
+}
+
+.ds-ad-ui .ds-break-status {
+  border-radius: 3px;
+  font-weight: 600;
+}
+.ds-ad-ui .ds-break-status-container {
+  bottom: 2rem;
+  left: 2rem;
+}
+.ds-ad-ui .ds-break-status-container.ds-break-status-container__overlay-active {
+  transform: translateY(-20px);
+}
+
+.ds-seek-bar {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+.ds-seek-bar .ds-seek-bar__ad {
+  background-color: #ff0;
+}
+.ds-seek-bar .ds-seek-bar__ad.ds-seek-bar__ad--watched {
+  background-color: transparent;
+}
+
+.ds-seek-bar__progress-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ds-slider__root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  /* For mobile devices change hover behaviour */
+}
+.ds-slider__root.ds-slider__draggable {
+  cursor: pointer;
+}
+.ds-slider__root:hover .ds-slider__slider-hover,
+.ds-slider__root:hover .ds-slider__tooltip-container, .ds-slider__root.ds-slider__scrubbing .ds-slider__slider-hover,
+.ds-slider__root.ds-slider__scrubbing .ds-slider__tooltip-container {
+  opacity: 1;
+}
+.ds-slider__root:hover .ds-slider__shy-scrubber, .ds-slider__root.ds-slider__scrubbing .ds-slider__shy-scrubber {
+  transform: scale(1);
+}
+@media (hover: none) {
+  .ds-slider__root:hover:not(.ds-slider__scrubbing) .ds-slider__slider-hover,
+.ds-slider__root:hover:not(.ds-slider__scrubbing) .ds-slider__tooltip-container {
+    opacity: 0;
+  }
+  .ds-slider__root .ds-slider__shy-scrubber {
+    transform: scale(1);
+  }
+}
+
+.ds-slider__slider,
+.ds-slider__slider-hover,
+.ds-slider__slider-background {
+  position: absolute;
+}
+
+.ds-slider__slider,
+.ds-slider__scrubber,
+.ds-slider__shy-scrubber,
+.ds-slider__tooltip-label,
+.ds-slider__tooltip-label::before {
+  background-color: #fff;
+}
+
+.ds-slider__slider-background,
+.ds-slider__slider-hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ds-slider__slider-hover {
+  opacity: 0;
+  transition: opacity 0.12s;
+  will-change: transform, opacity;
+}
+
+.ds-slider__scrubber-container {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  will-change: transform;
+}
+
+.ds-slider__scrubber, .ds-slider__shy-scrubber {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.ds-slider__shy-scrubber {
+  transform: scale(0);
+  transition: transform 0.12s;
+}
+
+.ds-slider__tooltip-container {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.12s;
+  will-change: transform, opacity;
+}
+
+.ds-slider__tooltip-label {
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  padding: 2px 8px 4px;
+  position: absolute;
+  pointer-events: none;
+}
+.ds-slider__tooltip-label::before {
+  content: " ";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.ds-slider__tooltip-label span {
+  z-index: 1;
+}
+
+.ds-slider__tooltip-image {
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+.ds-slider__tooltip-image > img {
+  display: block;
+}
+
+.ds-slider__marker-container {
+  position: absolute;
+  pointer-events: none;
+}
+
+.ds-slider__marker {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.ds-slider__horizontal .ds-slider__slider,
+.ds-slider__horizontal .ds-slider__slider-hover,
+.ds-slider__vertical .ds-slider__slider,
+.ds-slider__vertical .ds-slider__slider-hover {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.ds-slider__horizontal-reversed .ds-slider__slider,
+.ds-slider__horizontal-reversed .ds-slider__slider-hover,
+.ds-slider__vertical-reversed .ds-slider__slider,
+.ds-slider__vertical-reversed .ds-slider__slider-hover {
+  transform-origin: 100% 100%;
+  will-change: transform;
+}
+
+.ds-slider__horizontal.ds-slider__root,
+.ds-slider__horizontal-reversed.ds-slider__root {
+  flex-direction: column;
+}
+.ds-slider__horizontal .ds-slider__slider,
+.ds-slider__horizontal .ds-slider__slider-hover,
+.ds-slider__horizontal .ds-slider__slider-background,
+.ds-slider__horizontal-reversed .ds-slider__slider,
+.ds-slider__horizontal-reversed .ds-slider__slider-hover,
+.ds-slider__horizontal-reversed .ds-slider__slider-background {
+  width: 100%;
+  height: 4px;
+}
+.ds-slider__horizontal .ds-slider__scrubber-container,
+.ds-slider__horizontal-reversed .ds-slider__scrubber-container {
+  left: -6px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-container,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-container {
+  height: 12px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-label,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-label {
+  bottom: 0;
+  transform: translate(-50%, -19px);
+}
+.ds-slider__horizontal .ds-slider__tooltip-label::before,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-label::before {
+  left: 50%;
+  bottom: -5px;
+  margin-left: -5px;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image,
+.ds-slider__horizontal .ds-slider__tooltip-icon,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-icon {
+  width: 240px;
+  transform: translate(-50%, -52px);
+}
+.ds-slider__horizontal .ds-slider__tooltip-icon,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-icon {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  text-align: center;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image {
+  bottom: 0;
+}
+.ds-slider__horizontal .ds-slider__tooltip-image > img,
+.ds-slider__horizontal-reversed .ds-slider__tooltip-image > img {
+  width: 100%;
+}
+.ds-slider__horizontal .ds-slider__marker-container,
+.ds-slider__horizontal-reversed .ds-slider__marker-container {
+  height: 4px;
+  width: 100%;
+}
+.ds-slider__horizontal .ds-slider__marker,
+.ds-slider__horizontal-reversed .ds-slider__marker {
+  height: 100%;
+  padding: 0 2px;
+  margin: 0 -2px;
+}
+
+.ds-slider__vertical.ds-slider__root,
+.ds-slider__vertical-reversed.ds-slider__root {
+  flex-direction: row;
+}
+.ds-slider__vertical .ds-slider__slider,
+.ds-slider__vertical .ds-slider__slider-hover,
+.ds-slider__vertical .ds-slider__slider-background,
+.ds-slider__vertical-reversed .ds-slider__slider,
+.ds-slider__vertical-reversed .ds-slider__slider-hover,
+.ds-slider__vertical-reversed .ds-slider__slider-background {
+  height: 100%;
+  width: 4px;
+}
+.ds-slider__vertical .ds-slider__scrubber-container,
+.ds-slider__vertical-reversed .ds-slider__scrubber-container {
+  top: -6px;
+}
+.ds-slider__vertical .ds-slider__tooltip-container,
+.ds-slider__vertical-reversed .ds-slider__tooltip-container {
+  width: 12px;
+}
+.ds-slider__vertical .ds-slider__tooltip-label,
+.ds-slider__vertical-reversed .ds-slider__tooltip-label {
+  right: 0;
+  transform: translate(-19px, -50%);
+}
+.ds-slider__vertical .ds-slider__tooltip-label::before,
+.ds-slider__vertical-reversed .ds-slider__tooltip-label::before {
+  top: 50%;
+  right: -5px;
+  margin-top: -5px;
+}
+.ds-slider__vertical .ds-slider__tooltip-image,
+.ds-slider__vertical-reversed .ds-slider__tooltip-image {
+  height: 140px;
+  right: 0;
+  transform: translate(-92px, -50%);
+}
+.ds-slider__vertical .ds-slider__tooltip-image > img,
+.ds-slider__vertical-reversed .ds-slider__tooltip-image > img {
+  height: 100%;
+}
+.ds-slider__vertical .ds-slider__marker-container,
+.ds-slider__vertical-reversed .ds-slider__marker-container {
+  height: 100%;
+  width: 4px;
+}
+.ds-slider__vertical .ds-slider__marker,
+.ds-slider__vertical-reversed .ds-slider__marker {
+  width: 100%;
+  padding: 2px 0;
+  margin: -2px 0;
+}
+
+.cover {
+  height: 100vh;
+  opacity: 0;
+  position: absolute;
+  width: 100vw;
+}
+.cover::after {
+  content: "";
+  background-color: #2a2a2a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.cover__content {
+  animation-delay: 0.4s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  width: 55%;
+  margin-left: 40px;
+}
+.cover__content--pause {
+  align-items: center;
+  width: 100%;
+}
+.cover__play {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  padding: 28px 20px 24px 24px;
+  margin-bottom: 12px;
+}
+.cover__play .ds-icon {
+  width: 60px;
+}
+.cover__time {
+  position: relative;
+  top: 2px;
+}
+.cover__logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+}
+.cover__logo img {
+  height: 60px;
+}
+.cover__chromecast {
+  top: 24px;
+  width: 24px;
+}
+.cover__chromecast--no-description {
+  left: 4px;
+  top: 0;
+}
+.cover h1 {
+  font-size: 2.5em;
+  margin-bottom: 12px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.cover p {
+  line-height: 1.4em;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.cover__overlay {
+  background: transparent;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.cover--in, .cover--in .cover__content {
+  animation-name: fade-in;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+.cover--hide {
+  display: none;
+}
+
+.ds-poster {
+  width: 100vw;
+  height: 100vh;
+}
+.ds-chromecast--loaded .ds-poster {
+  display: none;
+}
+
+.ds-control-bar {
+  padding: 0 10px 0 6px;
+  width: 90%;
+  left: 5%;
+  bottom: 40px;
+}
+.ds-control-bar::after {
+  content: "";
+  background-color: #2a2a2a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.ds-control-bar .ds-icon--pause {
+  width: 20px;
+}
+.ds-control-bar .ds-control-bar__gradient {
+  background: none;
+  backdrop-filter: none;
+}
+
+.ds-loader {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  padding: 50px;
+}
+.ds-loader::before {
+  width: 60px;
+  height: 60px;
+  top: 15px;
+  left: 14px;
+}
+
+.ds-overlay .ds-loader {
+  bottom: 14vh;
+}
+
+.ds-ad__info {
+  position: absolute;
+  top: 80%;
+  margin-left: 5%;
+}
+
+.ds-break-status-container {
+  left: 62.5px;
+  top: 90%;
+}
+
+.ds-break-status-container.ds-break-status-container__overlay-active {
+  transform: translateY(-55px);
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+}
+
+.stats-modal {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+}
+.stats-modal .stats-close-icon {
+  display: none;
+}
+
+/*# sourceMappingURL=player.css.map */
+
+body.realm--dce-epl {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.epl-logo.png');
+  --progress-color: #05f1ff;
+  background-color: #410052; }
+  body.realm--dce-epl .ds-progress-container__play-progress,
+  body.realm--dce-epl .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-epl .ds-slider__slider,
+  body.realm--dce-epl .ds-seek-bar__ad {
+    background: #05f1ff; }
+  body.realm--dce-epl .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-epl .error {
+    background-color: #410052;
+    color: #39083E; }
+    body.realm--dce-epl .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.epl.mini-logo.png"); }
+
+body.realm--dce-fei {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.fei-logo.png');
+  --progress-color: #0076c0;
+  background-color: #61007D; }
+  body.realm--dce-fei .ds-progress-container__play-progress,
+  body.realm--dce-fei .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-fei .ds-slider__slider,
+  body.realm--dce-fei .ds-seek-bar__ad {
+    background: #0076c0; }
+  body.realm--dce-fei .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-fei .error {
+    background-color: #61007D;
+    color: #FFF; }
+    body.realm--dce-fei .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fei.mini-logo.png"); }
+
+body.realm--dce-fivb {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.fivb-logo.png');
+  --progress-color: #c7f300;
+  background-color: #14201f; }
+  body.realm--dce-fivb .ds-progress-container__play-progress,
+  body.realm--dce-fivb .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-fivb .ds-slider__slider,
+  body.realm--dce-fivb .ds-seek-bar__ad {
+    background: #c7f300; }
+  body.realm--dce-fivb .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-fivb .error {
+    background-color: #14201f;
+    color: #FFF; }
+    body.realm--dce-fivb .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fivb.mini-logo.png"); }
+
+body.realm--dce-pbr {
+  --logo-size: 35%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.pbr-logo.png');
+  --progress-color: #b88a2d;
+  background-color: #000000; }
+  body.realm--dce-pbr .ds-progress-container__play-progress,
+  body.realm--dce-pbr .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-pbr .ds-slider__slider,
+  body.realm--dce-pbr .ds-seek-bar__ad {
+    background: #b88a2d; }
+  body.realm--dce-pbr .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-pbr .error {
+    background-color: #000000;
+    color: #C08900; }
+    body.realm--dce-pbr .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.pbr.mini-logo.png"); }
+
+body.realm--dce-sandbox {
+  --logo-size: 25%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.sandbox-logo.png');
+  --progress-color: #0076c0;
+  background-color: #172D62; }
+  body.realm--dce-sandbox .ds-progress-container__play-progress,
+  body.realm--dce-sandbox .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-sandbox .ds-slider__slider,
+  body.realm--dce-sandbox .ds-seek-bar__ad {
+    background: #0076c0; }
+  body.realm--dce-sandbox .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-sandbox .error {
+    background-color: #172D62;
+    color: #FFF; }
+    body.realm--dce-sandbox .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.sandbox.mini-logo.png"); }
+
+body.realm--dce-ssport {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.ssport-logo.png');
+  --progress-color: #003e99;
+  background-color: #000000; }
+  body.realm--dce-ssport .ds-progress-container__play-progress,
+  body.realm--dce-ssport .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-ssport .ds-slider__slider,
+  body.realm--dce-ssport .ds-seek-bar__ad {
+    background: #003e99; }
+  body.realm--dce-ssport .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-ssport .error {
+    background-color: #000000;
+    color: #FFF; }
+    body.realm--dce-ssport .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.ssport.mini-logo.png"); }
+
+body.realm--dce-seriea {
+  --logo-size: 15%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.seriea-logo.png');
+  --progress-color: #072d5e;
+  background-color: #4B99DF; }
+  body.realm--dce-seriea .ds-progress-container__play-progress,
+  body.realm--dce-seriea .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-seriea .ds-slider__slider,
+  body.realm--dce-seriea .ds-seek-bar__ad {
+    background: #072d5e; }
+  body.realm--dce-seriea .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-seriea .error {
+    background-color: #4B99DF;
+    color: #FFF; }
+    body.realm--dce-seriea .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.seriea.mini-logo.png"); }
+
+body.realm--dce-ent {
+  --logo-size: 25%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.ent-logo.png');
+  --progress-color: #0076c0;
+  background-color: #172D62; }
+  body.realm--dce-ent .ds-progress-container__play-progress,
+  body.realm--dce-ent .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-ent .ds-slider__slider,
+  body.realm--dce-ent .ds-seek-bar__ad {
+    background: #0076c0; }
+  body.realm--dce-ent .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-ent .error {
+    background-color: #172D62;
+    color: #FFF; }
+    body.realm--dce-ent .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.sandbox.mini-logo.png"); }
+
+body.realm--dce-strive {
+  --logo-size: 15%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.imgott-logo.png');
+  --progress-color: #79b857;
+  background-color: #474B5D; }
+  body.realm--dce-strive .ds-progress-container__play-progress,
+  body.realm--dce-strive .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-strive .ds-slider__slider,
+  body.realm--dce-strive .ds-seek-bar__ad {
+    background: #79b857; }
+  body.realm--dce-strive .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-strive .error {
+    background-color: #474B5D;
+    color: #FFF; }
+    body.realm--dce-strive .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.imgott.mini-logo.png"); }
+
+body.realm--dce-admufc {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.admufc-logo.png');
+  --progress-color: #ff080a;
+  background-color: #DD0000; }
+  body.realm--dce-admufc .ds-progress-container__play-progress,
+  body.realm--dce-admufc .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-admufc .ds-slider__slider,
+  body.realm--dce-admufc .ds-seek-bar__ad {
+    background: #ff080a; }
+  body.realm--dce-admufc .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-admufc .error {
+    background-color: #DD0000;
+    color: #FFF; }
+    body.realm--dce-admufc .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.admufc.mini-logo.png"); }
+
+body.realm--dce-ufc {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.ufc-logo.png');
+  --progress-color: #ff0d0e;
+  background-color: #DD0000; }
+  body.realm--dce-ufc .ds-progress-container__play-progress,
+  body.realm--dce-ufc .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-ufc .ds-slider__slider,
+  body.realm--dce-ufc .ds-seek-bar__ad {
+    background: #ff0d0e; }
+  body.realm--dce-ufc .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-ufc .error {
+    background-color: #DD0000;
+    color: #FFF; }
+    body.realm--dce-ufc .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.ufc.mini-logo.png"); }
+
+body.realm--dce-fashion {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.fashion-logo.png');
+  --progress-color: #0076c0;
+  background-color: #000000; }
+  body.realm--dce-fashion .ds-progress-container__play-progress,
+  body.realm--dce-fashion .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-fashion .ds-slider__slider,
+  body.realm--dce-fashion .ds-seek-bar__ad {
+    background: #0076c0; }
+  body.realm--dce-fashion .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-fashion .error {
+    background-color: #000000;
+    color: #FFF; }
+    body.realm--dce-fashion .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fashion.mini-logo.png"); }
+
+body.realm--dce-wwe {
+  --logo-size: 20%;
+  --logo-image: url('https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/wwe-logo.svg');
+  --progress-color: #ff0402;
+  background-color: #000000; }
+  body.realm--dce-wwe .ds-progress-container__play-progress,
+  body.realm--dce-wwe .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-wwe .ds-slider__slider,
+  body.realm--dce-wwe .ds-seek-bar__ad {
+    background: #ff0402; }
+  body.realm--dce-wwe .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-wwe .error {
+    background-color: #000000;
+    color: #FFF; }
+    body.realm--dce-wwe .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.wwe.mini-logo.png"); }
+
+body.realm--dce-ppvaccess {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.ppvaccess-logo.png');
+  --progress-color: #65c7c3;
+  background-color: #65C7C3; }
+  body.realm--dce-ppvaccess .ds-progress-container__play-progress,
+  body.realm--dce-ppvaccess .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-ppvaccess .ds-slider__slider,
+  body.realm--dce-ppvaccess .ds-seek-bar__ad {
+    background: #65c7c3; }
+  body.realm--dce-ppvaccess .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-ppvaccess .error {
+    background-color: #65C7C3;
+    color: #FFF; }
+    body.realm--dce-ppvaccess .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.ppvaccess.mini-logo.png"); }
+
+body.realm--dce-euroleague {
+  --logo-size: 25%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.euroleague-logo.png');
+  --progress-color: #f54400;
+  background-color: #000000; }
+  body.realm--dce-euroleague .ds-progress-container__play-progress,
+  body.realm--dce-euroleague .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-euroleague .ds-slider__slider,
+  body.realm--dce-euroleague .ds-seek-bar__ad {
+    background: #f54400; }
+  body.realm--dce-euroleague .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-euroleague .error {
+    background-color: #000000;
+    color: #FFF; }
+    body.realm--dce-euroleague .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.euroleague.mini-logo.png"); }
+
+body.realm--dce-shortcut {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.shortcut-logo.png');
+  --progress-color: #00000f;
+  background-color: #000; }
+  body.realm--dce-shortcut .ds-progress-container__play-progress,
+  body.realm--dce-shortcut .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-shortcut .ds-slider__slider,
+  body.realm--dce-shortcut .ds-seek-bar__ad {
+    background: #00000f; }
+  body.realm--dce-shortcut .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-shortcut .error {
+    background-color: #000;
+    color: #FFF; }
+    body.realm--dce-shortcut .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.shortcut.mini-logo.png"); }
+
+body.realm--dce-thr {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.thr-logo.png');
+  --progress-color: #e01920;
+  background-color: #E01920; }
+  body.realm--dce-thr .ds-progress-container__play-progress,
+  body.realm--dce-thr .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-thr .ds-slider__slider,
+  body.realm--dce-thr .ds-seek-bar__ad {
+    background: #e01920; }
+  body.realm--dce-thr .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-thr .error {
+    background-color: #E01920;
+    color: #FFF; }
+    body.realm--dce-thr .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.thr.mini-logo.png"); }
+
+body.realm--dce-abff {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.abff-logo.png');
+  --progress-color: #ee4c90;
+  background-color: #000; }
+  body.realm--dce-abff .ds-progress-container__play-progress,
+  body.realm--dce-abff .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-abff .ds-slider__slider,
+  body.realm--dce-abff .ds-seek-bar__ad {
+    background: #ee4c90; }
+  body.realm--dce-abff .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-abff .error {
+    background-color: #000;
+    color: #FFF; }
+    body.realm--dce-abff .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.abff.mini-logo.png"); }
+
+body.realm--dce-elevensportsbl {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.eleven-logo.png');
+  --progress-color: #ef222c;
+  background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven-bg-image.png");
+  background-size: cover;
+  background-color: #10253D; }
+  body.realm--dce-elevensportsbl .ds-progress-container__play-progress,
+  body.realm--dce-elevensportsbl .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-elevensportsbl .ds-slider__slider,
+  body.realm--dce-elevensportsbl .ds-seek-bar__ad {
+    background: #ef222c; }
+  body.realm--dce-elevensportsbl .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-elevensportsbl .error {
+    background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven-bg-image.png");
+    background-size: cover;
+    background-color: #10253D;
+    color: #FFF; }
+    body.realm--dce-elevensportsbl .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven.mini-logo.png"); }
+
+body.realm--dce-elevensportspt {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.eleven-logo.png');
+  --progress-color: #ef222c;
+  background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven-bg-image.png");
+  background-size: cover;
+  background-color: #10253D; }
+  body.realm--dce-elevensportspt .ds-progress-container__play-progress,
+  body.realm--dce-elevensportspt .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-elevensportspt .ds-slider__slider,
+  body.realm--dce-elevensportspt .ds-seek-bar__ad {
+    background: #ef222c; }
+  body.realm--dce-elevensportspt .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-elevensportspt .error {
+    background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven-bg-image.png");
+    background-size: cover;
+    background-color: #10253D;
+    color: #FFF; }
+    body.realm--dce-elevensportspt .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.eleven.mini-logo.png"); }
+
+body.realm--dce-univision {
+  --logo-size: 25%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.univision-logo.png');
+  --progress-color: #fa6464;
+  background-color: #FA6464; }
+  body.realm--dce-univision .ds-progress-container__play-progress,
+  body.realm--dce-univision .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-univision .ds-slider__slider,
+  body.realm--dce-univision .ds-seek-bar__ad {
+    background: #fa6464; }
+  body.realm--dce-univision .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-univision .error {
+    background-color: #FA6464;
+    color: #FFF; }
+    body.realm--dce-univision .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.univision.mini-logo.png"); }
+
+body.realm--dce-romeosantos {
+  --logo-size: 25%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.romeosantos-logo.png');
+  --progress-color: #c90000;
+  background-color: #000; }
+  body.realm--dce-romeosantos .ds-progress-container__play-progress,
+  body.realm--dce-romeosantos .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-romeosantos .ds-slider__slider,
+  body.realm--dce-romeosantos .ds-seek-bar__ad {
+    background: #c90000; }
+  body.realm--dce-romeosantos .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-romeosantos .error {
+    background-color: #000;
+    color: #FFF; }
+    body.realm--dce-romeosantos .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.romeosantos.mini-logo.png"); }
+
+body.realm--dce-btboxoffice {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.btboxoffice-logo.png');
+  --progress-color: #5514b4;
+  background-color: #5514B4; }
+  body.realm--dce-btboxoffice .ds-progress-container__play-progress,
+  body.realm--dce-btboxoffice .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-btboxoffice .ds-slider__slider,
+  body.realm--dce-btboxoffice .ds-seek-bar__ad {
+    background: #5514b4; }
+  body.realm--dce-btboxoffice .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-btboxoffice .error {
+    background-color: #5514B4;
+    color: #FFF; }
+    body.realm--dce-btboxoffice .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.btboxoffice.mini-logo.png"); }
+
+body.realm--dce-icc {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.icc-logo.png');
+  --progress-color: #00000f;
+  background-color: #FFF; }
+  body.realm--dce-icc .ds-progress-container__play-progress,
+  body.realm--dce-icc .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-icc .ds-slider__slider,
+  body.realm--dce-icc .ds-seek-bar__ad {
+    background: #00000f; }
+  body.realm--dce-icc .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-icc .error {
+    background-color: #FFF;
+    color: #0080C1; }
+    body.realm--dce-icc .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.icc.mini-logo.png"); }
+
+body.realm--dce-glory {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.glory-logo.png');
+  --progress-color: #00000f;
+  background-color: #EC1C23; }
+  body.realm--dce-glory .ds-progress-container__play-progress,
+  body.realm--dce-glory .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-glory .ds-slider__slider,
+  body.realm--dce-glory .ds-seek-bar__ad {
+    background: #00000f; }
+  body.realm--dce-glory .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-glory .error {
+    background-color: #EC1C23;
+    color: #FFF; }
+    body.realm--dce-glory .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.glory.mini-logo.png"); }
+
+body.realm--dce-adjara {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.adjara-logo.png');
+  --progress-color: #fdd106;
+  background-color: #000; }
+  body.realm--dce-adjara .ds-progress-container__play-progress,
+  body.realm--dce-adjara .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-adjara .ds-slider__slider,
+  body.realm--dce-adjara .ds-seek-bar__ad {
+    background: #fdd106; }
+  body.realm--dce-adjara .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-adjara .error {
+    background-color: #000;
+    color: #FFF; }
+    body.realm--dce-adjara .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.adjara.mini-logo.png"); }
+
+body.realm--dce-coresports {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.coresports-logo.png');
+  --progress-color: #e01920;
+  background-color: #000000; }
+  body.realm--dce-coresports .ds-progress-container__play-progress,
+  body.realm--dce-coresports .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-coresports .ds-slider__slider,
+  body.realm--dce-coresports .ds-seek-bar__ad {
+    background: #e01920; }
+  body.realm--dce-coresports .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-coresports .error {
+    background-color: #000000;
+    color: #FFF; }
+    body.realm--dce-coresports .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.coresports.mini-logo.png"); }
+
+body.realm--dce-sptv {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.sptv-logo.png');
+  --progress-color: red;
+  background-color: #d21e15; }
+  body.realm--dce-sptv .ds-progress-container__play-progress,
+  body.realm--dce-sptv .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-sptv .ds-slider__slider,
+  body.realm--dce-sptv .ds-seek-bar__ad {
+    background: red; }
+  body.realm--dce-sptv .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-sptv .error {
+    background-color: #d21e15;
+    color: #FFF; }
+    body.realm--dce-sptv .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.sptv.mini-logo.png"); }
+
+body.realm--dce-usga {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.usga-logo.png');
+  --progress-color: #da1a31;
+  background-color: #fff; }
+  body.realm--dce-usga .ds-progress-container__play-progress,
+  body.realm--dce-usga .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-usga .ds-slider__slider,
+  body.realm--dce-usga .ds-seek-bar__ad {
+    background: #da1a31; }
+  body.realm--dce-usga .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-usga .error {
+    background-color: #fff;
+    color: #00365f; }
+    body.realm--dce-usga .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.usga.mini-logo.png"); }
+
+body.realm--dce-wnba {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.wnba-logo.png');
+  --progress-color: #fa4d00;
+  background-color: #000; }
+  body.realm--dce-wnba .ds-progress-container__play-progress,
+  body.realm--dce-wnba .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-wnba .ds-slider__slider,
+  body.realm--dce-wnba .ds-seek-bar__ad {
+    background: #fa4d00; }
+  body.realm--dce-wnba .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-wnba .error {
+    background-color: #000;
+    color: #FFF; }
+    body.realm--dce-wnba .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.wnba.mini-logo.png"); }
+
+body.realm--dce-spurs {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.spurs-logo.png');
+  --progress-color: #00000f;
+  background-color: #6915dc; }
+  body.realm--dce-spurs .ds-progress-container__play-progress,
+  body.realm--dce-spurs .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-spurs .ds-slider__slider,
+  body.realm--dce-spurs .ds-seek-bar__ad {
+    background: #00000f; }
+  body.realm--dce-spurs .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-spurs .error {
+    background-color: #6915dc;
+    color: #FFF; }
+    body.realm--dce-spurs .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.spurs.mini-logo.png"); }
+
+body.realm--dce-pto {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.pto-logo.png');
+  --progress-color: #00000f;
+  background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.pto-bg-image.png");
+  background-size: cover;
+  background-color: #222322; }
+  body.realm--dce-pto .ds-progress-container__play-progress,
+  body.realm--dce-pto .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-pto .ds-slider__slider,
+  body.realm--dce-pto .ds-seek-bar__ad {
+    background: #00000f; }
+  body.realm--dce-pto .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-pto .error {
+    background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.pto-bg-image.png");
+    background-size: cover;
+    background-color: #222322;
+    color: #FFF; }
+    body.realm--dce-pto .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.pto.mini-logo.png"); }
+
+body.realm--dce-skynz {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.skynz-logo.png');
+  --progress-color: #00ace6;
+  background-color: #00ACE6; }
+  body.realm--dce-skynz .ds-progress-container__play-progress,
+  body.realm--dce-skynz .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-skynz .ds-slider__slider,
+  body.realm--dce-skynz .ds-seek-bar__ad {
+    background: #00ace6; }
+  body.realm--dce-skynz .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-skynz .error {
+    background-color: #00ACE6;
+    color: #FFF; }
+    body.realm--dce-skynz .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.skynz.mini-logo.png"); }
+
+body.realm--dce-tapgo {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.tapgo-logo.png');
+  --progress-color: #ffa301;
+  background-color: #01304c; }
+  body.realm--dce-tapgo .ds-progress-container__play-progress,
+  body.realm--dce-tapgo .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-tapgo .ds-slider__slider,
+  body.realm--dce-tapgo .ds-seek-bar__ad {
+    background: #ffa301; }
+  body.realm--dce-tapgo .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-tapgo .error {
+    background-color: #01304c;
+    color: #FFF; }
+    body.realm--dce-tapgo .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.tapgo.mini-logo.png"); }
+
+body.realm--dce-oilers {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.oilers-logo.png');
+  --progress-color: #041e42;
+  background-color: #041E42; }
+  body.realm--dce-oilers .ds-progress-container__play-progress,
+  body.realm--dce-oilers .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-oilers .ds-slider__slider,
+  body.realm--dce-oilers .ds-seek-bar__ad {
+    background: #041e42; }
+  body.realm--dce-oilers .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-oilers .error {
+    background-color: #041E42;
+    color: #FFF; }
+    body.realm--dce-oilers .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.oilers.mini-logo.png"); }
+
+body.realm--dce-fedcom {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.fedcom-logo.png');
+  --progress-color: #e8beff;
+  background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fedcom-bg-image.png");
+  background-size: cover;
+  background-color: #E8BEFF; }
+  body.realm--dce-fedcom .ds-progress-container__play-progress,
+  body.realm--dce-fedcom .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-fedcom .ds-slider__slider,
+  body.realm--dce-fedcom .ds-seek-bar__ad {
+    background: #e8beff; }
+  body.realm--dce-fedcom .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-fedcom .error {
+    background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fedcom-bg-image.png");
+    background-size: cover;
+    background-color: #E8BEFF;
+    color: #000; }
+    body.realm--dce-fedcom .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.fedcom.mini-logo.png"); }
+
+body.realm--dce-mint {
+  --logo-size: 20%;
+  --logo-image: url('https://dice-web.imggaming.com/chromecast/logos/dce.mint-logo.png');
+  --progress-color: #141c29;
+  background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.mint-bg-image.png");
+  background-size: cover;
+  background-color: #141C29; }
+  body.realm--dce-mint .ds-progress-container__play-progress,
+  body.realm--dce-mint .ds-progress-container__play-progress-dot::before,
+  body.realm--dce-mint .ds-slider__slider,
+  body.realm--dce-mint .ds-seek-bar__ad {
+    background: #141c29; }
+  body.realm--dce-mint .logo-main {
+    background-image: var(--logo-image);
+    background-size: var(--splash-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    padding-top: 25%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  body.realm--dce-mint .error {
+    background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.mint-bg-image.png");
+    background-size: cover;
+    background-color: #141C29;
+    color: #FFF; }
+    body.realm--dce-mint .error .logo {
+      background-color: transparent;
+      background-image: url("https://dice-web.imggaming.com/chromecast/logos/dce.mint.mini-logo.png"); }
+
+body {
+  height: 100vh; }
+
+.ds-chromecast--loaded .logo-main {
+  display: none; }
+
+.error {
+  font-family: arial, sans-serif;
+  height: 100vh;
+  left: 0;
+  line-height: 2em;
+  opacity: 0;
+  padding: 20vh 5vw;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1; }
+  body.with-error .error {
+    opacity: 1;
+    transition: opacity 0.5s ease; }
+  .error h2 {
+    font-size: 3.5em;
+    margin: 1em 0;
+    line-height: 1em; }
+  .error p {
+    font-size: 1.7em; }
+  .error-details {
+    margin-top: 100px; }
+  .error-code {
+    font-weight: bold; }
+  .error .logo {
+    background-color: #000;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 10vh;
+    height: 80px;
+    position: fixed;
+    right: 5vw;
+    width: 80px;
+    z-index: 90001; }
+
+.ds-loader {
+  left: 50px;
+  bottom: 50px;
+  top: auto;
+  transform: scale(0.8);
+  position: absolute;
+  z-index: 90002; }
+
+.ds-control-bar {
+  background: transparent; }
+
+video::-webkit-media-text-track-container {
+  overflow: visible !important;
+  text-align: center;
+  transform: translateY(0%) !important; }
+
+video::cue {
+  font-size: 100%;
+  color: white;
+  text-align: center; }
+
+.ds-overlay {
+  overflow: hidden; }
+
+.loading-subtitle {
+  display: none; }
+
+.ds-seek-bar__progress-container {
+  height: 100%; }
+
+@font-face {
+  font-family: 'Heading Pro';
+  src: url("https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/Font/HeadingPro-Bold.woff2") format("woff2"), url("https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/Font/HeadingPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Heading Pro Double';
+  src: url("https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/Font/HeadingProDouble-Bold.woff2") format("woff2"), url("https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/Font/HeadingProDouble-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+body.realm--dce-wwe .logo-main {
+  background: url(https://doris-static-assets-80d63b5e.s3-eu-west-1.amazonaws.com/wwe/Background_Radial_Gradient.svg) no-repeat center center fixed;
+  background-size: cover; }
+  body.realm--dce-wwe .logo-main:after {
+    content: '';
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    margin: -400px -200px 0;
+    position: absolute;
+    background-size: contain;
+    padding-top: 0;
+    top: 50%;
+    left: 50%;
+    background-image: var(--logo-image); }
+
+body.realm--dce-wwe .loading-subtitle {
+  color: #fff;
+  font-family: 'Heading Pro';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 2em; }
+
+body.realm--dce-wwe .ds-control-bar:after {
+  background: transparent; }
+
+body.realm--dce-wwe .cover__chromecast {
+  display: none; }
+
+body.realm--dce-wwe .ds-seek-bar__progress-container {
+  height: 100%; }
+
+body.realm--dce-wwe .ds-slider__scrubber,
+body.realm--dce-wwe .ds-slider__shy-scrubber {
+  display: none; }
+
+body.realm--dce-wwe .ds-loader {
+  background: transparent;
+  left: 45px;
+  bottom: 10vh; }
+
+body.realm--dce-wwe .ds-control-bar__section--left {
+  min-width: 46px; }
+
+body.realm--dce-wwe .cover__content {
+  animation-delay: 0.4s;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: start;
+  justify-content: flex-end;
+  padding: 24px 24px 80px;
+  opacity: 0;
+  width: 55%;
+  margin-left: 40px; }
+
+body.realm--dce-wwe.ds-chromecast--loaded .loading-subtitle {
+  display: none; }
+
