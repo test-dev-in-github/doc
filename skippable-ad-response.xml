@@ -11,7 +11,7 @@
             </Impression>
             <Creatives>
                 <Creative id="12345678">
-                    <Linear>
+                    <Linear skipoffset="00:00:05.000">
                         <Duration>00:00:30</Duration>
                         <TrackingEvents>
                             <Tracking event="start">
