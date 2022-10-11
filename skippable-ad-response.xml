@@ -49,7 +49,7 @@
                         </VideoClicks>
                         <MediaFiles>
                             <MediaFile delivery="progressive" width="960" height="540" type="video/mp4" bitrate="582">
-                                <![CDATA[ https://ytvastqa.appspot.com/static/sampletag/vastmedia.mp4 ]]>
+                                <![CDATA[ //content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4 ]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
