@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vmap:VMAP xmlns:vmap="http://www.iab.net/videosuite/vmap" version="1.0">
    <vmap:AdBreak timeOffset="start" breakType="linear" breakId="preroll">
-      <vmap:AdSource id="preroll-ad-1" allowMultipleAds="false" followRedirects="true">
+      <vmap:AdSource id="preroll-ad-1" allowMultipleAds="true" followRedirects="true">
          <vmap:VASTAdData>
             <VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="4.0">
                <Ad id="6094955165">
