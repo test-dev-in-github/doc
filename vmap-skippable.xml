@@ -64,7 +64,7 @@
                                  </Icon>
                               </Icons>
                               <MediaFiles>
-                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4</MediaFile>
                             </MediaFiles>
                            </Linear>
                         </Creative>
@@ -183,7 +183,7 @@
                                  </Icon>
                               </Icons>
                               <MediaFiles>
-                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4</MediaFile>
                             </MediaFiles>
                            </Linear>
                         </Creative>
@@ -302,7 +302,7 @@
                                  </Icon>
                               </Icons>
                               <MediaFiles>
-                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://v.adserve.tv/pg/24.mp4</MediaFile>
+                                <MediaFile bitrate="1215" delivery="progressive" height="720" id="video" type="video/mp4" width="1280">https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4</MediaFile>
                             </MediaFiles>
                            </Linear>
                         </Creative>
@@ -421,7 +421,7 @@
                                  </Icon>
                               </Icons>
                               <MediaFiles>
-                                 <MediaFile id="video" delivery="progressive" type="video/mp4" bitrate="1215" width="1280" height="720">https://v.adserve.tv/rama/25.mp4</MediaFile>
+                                 <MediaFile id="video" delivery="progressive" type="video/mp4" bitrate="1215" width="1280" height="720">https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4</MediaFile>
                               </MediaFiles>
                            </Linear>
                         </Creative>
@@ -540,7 +540,7 @@
                                  </Icon>
                               </Icons>
                               <MediaFiles>
-                                 <MediaFile id="video" delivery="progressive" type="video/mp4" bitrate="1215" width="1280" height="720">https://v.adserve.tv/rama/25.mp4</MediaFile>
+                                 <MediaFile id="video" delivery="progressive" type="video/mp4" bitrate="1215" width="1280" height="720">https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4</MediaFile>
                               </MediaFiles>
                            </Linear>
                         </Creative>
