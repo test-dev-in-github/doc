@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.2" xsi:noNamespaceSchemaLocation="vast.xsd">
+<Ad id="drynites" sequence="0">
+  <InLine>
+    <AdSystem version="1.0">WeeFrill</AdSystem>
+    <AdTitle>video</AdTitle>
+    <Description>video ad</Description>
+    <Advertiser>video ad advertiser</Advertiser>
+    <Pricing model="cpc" currency="GBP">1.99</Pricing>
+    <Survey><![CDATA[http://tracktest.yospace.com?label=survey&AdID=drynites]]></Survey>
+	<Error><![CDATA[http://tracktest.yospace.com?label=ERROR&AdID=drynites&errorcode=[ERRORCODE]]]></Error>
+	<Impression><![CDATA[http://tracktest.yospace.com?label=impression&AdID=drynites]]></Impression>
+    <ViewableImpression id="viewableImpression">
+      <Viewable><![CDATA[http://tracktest.yospace.com?label=viewable]]></Viewable>
+      <NotViewable><![CDATA[http://tracktest.yospace.com?label=notViewable]]></NotViewable>
+      <ViewUndetermined><![CDATA[http://tracktest.yospace.com?label=viewUndetermined]]></ViewUndetermined>
+    </ViewableImpression>
+    <AdVerifications>
+      <Verification vendor="iabtechlab.com-omid">
+        <TrackingEvents>
+          <Tracking event="verificationNotExecuted"><![CDATA[http://tracktest.yospace.com?label=verificationNotExecuted]]></Tracking>
+        </TrackingEvents>
+        <JavaScriptResource apiFramework="omid" browserOptional="true"><![CDATA[https://omsdk-public.herokuapp.com/omid-validation-verification-script-v1.js]]></JavaScriptResource>
+        <VerificationParameters>iabtechlab-Yospace</VerificationParameters>
+      </Verification>
+    </AdVerifications>
+    <Creatives>
+      <Creative id="111" adId="drynites" sequence="1">
+        <CreativeExtensions>
+          <CreativeExtension type="com.yospace.targetduration" targetDuration="10"/>
+          <CreativeExtension type="LinearCreativeExtension">
+            <Author name="Yospace" comment="linear extension">the data</Author>
+          </CreativeExtension>
+        </CreativeExtensions>
+        <Linear skipoffset="15.3%">
+          <Duration>00:00:20</Duration>
+          <Icons>
+            <Icon program="IAB initiative" width="80" height="80" xPosition="left" yPosition="top" offset="00:00:05" duration="00:00:07" apiFramework="framework">
+              <StaticResource creativeType="image/png"><![CDATA[http://wibble.com]]></StaticResource>
+                <IconClicks>
+                  <IconClickTracking><![CDATA[http://tracktest.yospace.com?label=iconClickTracking&AdID=drynites]]></IconClickTracking>
+                  <IconClickThrough><![CDATA[http://www.iab.com]]></IconClickThrough>
+                  <IconClickFallbackImages>
+                    <IconClickFallbackImage width="100" height="100">
+                      <AltText>FallbackImageText</AltText>
+         	          <StaticResource creativeType="image/png"><![CDATA[http://demo.yospace.com/assets/fallback.png]]></StaticResource>
+                    </IconClickFallbackImage>
+                  </IconClickFallbackImages>
+                </IconClicks>
+              <IconViewTracking><![CDATA[http://tracktest.yospace.com?label=iconViewTracking1&AdID=drynites]]></IconViewTracking>
+            </Icon>
+          </Icons>
+          <TrackingEvents>
+          	  <Tracking event="start"><![CDATA[http://tracktest.yospace.com?label=start&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[http://tracktest.yospace.com?label=firstQuartile&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+          	  <Tracking event="midpoint"><![CDATA[http://tracktest.yospace.com?label=midpoint&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+          	  <Tracking event="thirdQuartile"><![CDATA[http://tracktest.yospace.com?label=thirdQuartile&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+          	  <Tracking event="complete"><![CDATA[http://tracktest.yospace.com?label=complete&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+          	  <Tracking event="progress" offset="17.1%"><![CDATA[http://tracktest.yospace.com?label=progress17percent&AdID=drynites]]></Tracking>
+          	  <Tracking event="progress" offset="00:00:05"><![CDATA[http://tracktest.yospace.com?label=progress5seconds&AdID=drynites]]></Tracking>
+          	  <Tracking event="loaded"><![CDATA[http://tracktest.yospace.com?label=loaded&playhead=[CONTENTPLAYHEAD]&AdID=drynites]]></Tracking>
+          	  <Tracking event="mute"><![CDATA[http://tracktest.yospace.com?label=mute&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="unmute"><![CDATA[http://tracktest.yospace.com?label=unmute&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="pause"><![CDATA[http://tracktest.yospace.com?label=pause&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="resume"><![CDATA[http://tracktest.yospace.com?label=resume&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="playerExpand"><![CDATA[http://tracktest.yospace.com?label=playerExpand&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="playerCollapse"><![CDATA[http://tracktest.yospace.com?label=playerCollapse&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="closeLinear"><![CDATA[http://tracktest.yospace.com?label=closeLinear&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          	  <Tracking event="skip"><![CDATA[http://tracktest.yospace.com?label=skip&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=drynites]]></Tracking>
+          </TrackingEvents>
+          <VideoClicks>
+            <ClickThrough id="GDFP"><![CDATA[http://www.yospace.com]]></ClickThrough>
+			<ClickTracking id="111"><![CDATA[http://tracktest.yospace.com?label=linearClickTracking&AdID=drynites]]></ClickTracking>
+          </VideoClicks>
+          <MediaFiles>
+            <MediaFile bitrate="12000" delivery="progressive" height="240" id="GDFP" maintainAspectRatio="false" scalable="false" type="video/mp4" width="320"><![CDATA[https://demo.yospace.com/wf/SDK/assets/drynites_20.mp4]]></MediaFile>
+          </MediaFiles>
+        </Linear>
+      </Creative>
+      <Creative id="222" adId="drynites" sequence="2">
+        <NonLinearAds>
+          <TrackingEvents>
+    	    <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=222&AdID=drynites]]></Tracking>
+    	    <Tracking event="adExpand"><![CDATA[http://tracktest.yospace.com?label=adExpand&id=222&AdID=drynites]]></Tracking>
+    	    <Tracking event="adCollapse"><![CDATA[http://tracktest.yospace.com?label=adCollapse&id=222&AdID=drynites]]></Tracking>
+    	    <Tracking event="close"><![CDATA[http://tracktest.yospace.com?label=close&id=222&AdID=drynites]]></Tracking>
+    	    <Tracking event="acceptInvitation"><![CDATA[http://tracktest.yospace.com?label=acceptInvitation&id=222&AdID=drynites]]></Tracking>
+          </TrackingEvents>
+          <NonLinear height="86" width="309" scalable="true" maintainAspectRatio="true">
+            <StaticResource creativeType="image/png"><![CDATA[https://demo.yospace.com/wf/SDK/assets/overlay_pink.png]]></StaticResource>
+            <IFrameResource><![CDATA[http://tracktest.yospace.com/myIFrame]]></IFrameResource>
+            <HTMLResource><![CDATA[<!DOCTYPE html><html><body><h1>My First Heading</h1></body></html>]]></HTMLResource>
+            <NonLinearClickThrough><![CDATA[http://www.yospace.com]]></NonLinearClickThrough>
+            <NonLinearClickTracking><![CDATA[http://tracktest.yospace.com?label=NonLinearClickTracking&AdID=drynites]]></NonLinearClickTracking>
+          </NonLinear>
+        </NonLinearAds>
+      </Creative>
+      <Creative id="111" adId="drynites" sequence="1">
+      <CompanionAds required="any">
+      <Companion id="1" width="100" height="100" assetWidth="90" assetHeight="150" expandedWidth="150" expandedHeight="180" apiFramework="companion" adSlotId="2">
+            <StaticResource creativeType="image/png"><![CDATA[https://demo.yospace.com/wf/SDK/assets/overlay_pink.png]]></StaticResource>
+            <IFrameResource><![CDATA[http://tracktest.yospace.com/myCompanionIFrame]]></IFrameResource>
+            <HTMLResource><![CDATA[<!DOCTYPE html><html><body><h1>Companion Heading</h1></body></html>]]></HTMLResource>
+            <CompanionClickThrough><![CDATA[http://www.yospace.com]]></CompanionClickThrough>
+            <CompanionClickTracking><![CDATA[http://tracktest.yospace.com?label=CompanionClickTracking&AdID=drynites]]></CompanionClickTracking>
+            <AdParameters xmlEncoded="true"><![CDATA[companion Ad Parameters]]></AdParameters>
+            <AltText>Mouseover Text</AltText>
+            <TrackingEvents>
+    	       <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=companionTracking1&AdID=drynites]]></Tracking>
+    	       <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=companionTracking2&AdID=drynites]]></Tracking>
+            </TrackingEvents>
+         </Companion>
+      </CompanionAds>
+      </Creative>
+    </Creatives>
+    <Extensions>
+      <Extension type="FreeWheel">
+        <CreativeParameters>
+          <CreativeParameter creativeId="333" name="moat" type="Linear"><![CDATA[174057;174057;606595;19447647;19447651;;19447657;22898;g9898464;g215943;208888;91427938;63879/001;2797385;7386222;10;midroll;;174057:yospace_video_live;cpx-non;1499869727461935002]]>
+        </CreativeParameter>
+      </CreativeParameters>
+      </Extension>
+      <Extension type="com.yospace.wrapperhierarchy">
+         <AdWrapper id="drynites_grandparent" creativeId="444" AdSystem="WrapperTron">
+           <AdWrapper id="drynites_parent" creativeId="333" AdSystem="3rdPartyAdSystem">
+             <AdWrapper id="drynites" creativeId="111" AdSystem="InlineAdsRUs"/>
+           </AdWrapper>
+         </AdWrapper>
+      </Extension>
+    </Extensions>
+  </InLine>
+</Ad>
+<Ad id="vauxhall" sequence="1">
+  <InLine>
+    <AdSystem version="1.0">WeeFrill</AdSystem>
+    <AdTitle>video</AdTitle>
+    <Description>video ad</Description>
+    <Advertiser>video ad advertiser</Advertiser>
+    <Pricing model="cpc" currency="GBP">1.99</Pricing>
+    <Survey><![CDATA[http://tracktest.yospace.com?label=survey&AdID=vauxhall]]></Survey>
+	<Error><![CDATA[http://tracktest.yospace.com?label=ERROR&AdID=vauxhall&errorcode=[ERRORCODE]]]></Error>
+	<Impression><![CDATA[http://tracktest.yospace.com?label=impression&AdID=vauxhall]]></Impression>
+    <ViewableImpression id="viewableImpression">
+      <Viewable><![CDATA[http://tracktest.yospace.com?label=viewable]]></Viewable>
+      <NotViewable><![CDATA[http://tracktest.yospace.com?label=notViewable]]></NotViewable>
+      <ViewUndetermined><![CDATA[http://tracktest.yospace.com?label=viewUndetermined]]></ViewUndetermined>
+    </ViewableImpression>
+    <AdVerifications>
+      <Verification vendor="iabtechlab.com-omid">
+        <TrackingEvents>
+          <Tracking event="verificationNotExecuted"><![CDATA[http://tracktest.yospace.com?label=verificationNotExecuted]]></Tracking>
+        </TrackingEvents>
+        <JavaScriptResource apiFramework="omid" browserOptional="true"><![CDATA[https://omsdk-public.herokuapp.com/omid-validation-verification-script-v1.js]]></JavaScriptResource>
+        <VerificationParameters>iabtechlab-Yospace</VerificationParameters>
+      </Verification>
+    </AdVerifications>
+    <Creatives>
+      <Creative id="111" adId="vauxhall" sequence="1">
+        <CreativeExtensions>
+          <CreativeExtension type="com.yospace.targetduration" targetDuration="10"/>
+          <CreativeExtension type="LinearCreativeExtension">
+            <Author name="Yospace" comment="linear extension">the data</Author>
+          </CreativeExtension>
+        </CreativeExtensions>
+        <Linear skipoffset="15.3%">
+          <Duration>00:00:10</Duration>
+          <Icons>
+            <Icon program="IAB initiative" width="80" height="80" xPosition="left" yPosition="top" offset="00:00:05" duration="00:00:07" apiFramework="framework">
+              <StaticResource creativeType="image/png"><![CDATA[http://wibble.com]]></StaticResource>
+                <IconClicks>
+                  <IconClickTracking><![CDATA[http://tracktest.yospace.com?label=iconClickTracking&AdID=vauxhall]]></IconClickTracking>
+                  <IconClickThrough><![CDATA[http://www.iab.com]]></IconClickThrough>
+                  <IconClickFallbackImages>
+                    <IconClickFallbackImage width="100" height="100">
+                      <AltText>FallbackImageText</AltText>
+         	          <StaticResource creativeType="image/png"><![CDATA[http://demo.yospace.com/assets/fallback.png]]></StaticResource>
+                    </IconClickFallbackImage>
+                  </IconClickFallbackImages>
+                </IconClicks>
+              <IconViewTracking><![CDATA[http://tracktest.yospace.com?label=iconViewTracking1&AdID=vauxhall]]></IconViewTracking>
+            </Icon>
+          </Icons>
+          <TrackingEvents>
+          	  <Tracking event="start"><![CDATA[http://tracktest.yospace.com?label=start&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[http://tracktest.yospace.com?label=firstQuartile&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="midpoint"><![CDATA[http://tracktest.yospace.com?label=midpoint&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="thirdQuartile"><![CDATA[http://tracktest.yospace.com?label=thirdQuartile&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="complete"><![CDATA[http://tracktest.yospace.com?label=complete&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="progress" offset="17.1%"><![CDATA[http://tracktest.yospace.com?label=progress17percent&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="progress" offset="00:00:05"><![CDATA[http://tracktest.yospace.com?label=progress5seconds&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="loaded"><![CDATA[http://tracktest.yospace.com?label=loaded&playhead=[CONTENTPLAYHEAD]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="mute"><![CDATA[http://tracktest.yospace.com?label=mute&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="unmute"><![CDATA[http://tracktest.yospace.com?label=unmute&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="pause"><![CDATA[http://tracktest.yospace.com?label=pause&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="resume"><![CDATA[http://tracktest.yospace.com?label=resume&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="playerExpand"><![CDATA[http://tracktest.yospace.com?label=playerExpand&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="playerCollapse"><![CDATA[http://tracktest.yospace.com?label=playerCollapse&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="closeLinear"><![CDATA[http://tracktest.yospace.com?label=closeLinear&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          	  <Tracking event="skip"><![CDATA[http://tracktest.yospace.com?label=skip&playhead=[CONTENTPLAYHEAD]&cachebust=[CACHEBUSTING]&mediafile=[ASSETURI]&AdID=vauxhall]]></Tracking>
+          </TrackingEvents>
+          <VideoClicks>
+            <ClickThrough id="GDFP"><![CDATA[http://www.yospace.com]]></ClickThrough>
+			<ClickTracking id="111"><![CDATA[http://tracktest.yospace.com?label=linearClickTracking&AdID=vauxhall]]></ClickTracking>
+          </VideoClicks>
+          <MediaFiles>
+            <MediaFile bitrate="12000" delivery="progressive" height="240" id="GDFP" maintainAspectRatio="false" scalable="false" type="video/mp4" width="320"><![CDATA[https://demo.yospace.com/wf/SDK/assets/vauxhall_10.mp4]]></MediaFile>
+          </MediaFiles>
+        </Linear>
+      </Creative>
+      <Creative id="222" adId="vauxhall" sequence="2">
+        <NonLinearAds>
+          <TrackingEvents>
+    	    <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=222&AdID=vauxhall]]></Tracking>
+    	    <Tracking event="adExpand"><![CDATA[http://tracktest.yospace.com?label=adExpand&id=222&AdID=vauxhall]]></Tracking>
+    	    <Tracking event="adCollapse"><![CDATA[http://tracktest.yospace.com?label=adCollapse&id=222&AdID=vauxhall]]></Tracking>
+    	    <Tracking event="close"><![CDATA[http://tracktest.yospace.com?label=close&id=222&AdID=vauxhall]]></Tracking>
+    	    <Tracking event="acceptInvitation"><![CDATA[http://tracktest.yospace.com?label=acceptInvitation&id=222&AdID=vauxhall]]></Tracking>
+          </TrackingEvents>
+          <NonLinear height="86" width="309" scalable="true" maintainAspectRatio="true">
+            <StaticResource creativeType="image/png"><![CDATA[https://demo.yospace.com/wf/SDK/assets/overlay_blue.png]]></StaticResource>
+            <IFrameResource><![CDATA[http://tracktest.yospace.com/myIFrame]]></IFrameResource>
+            <HTMLResource><![CDATA[<!DOCTYPE html><html><body><h1>My First Heading</h1></body></html>]]></HTMLResource>
+            <NonLinearClickThrough><![CDATA[http://www.yospace.com]]></NonLinearClickThrough>
+            <NonLinearClickTracking><![CDATA[http://tracktest.yospace.com?label=NonLinearClickTracking&AdID=vauxhall]]></NonLinearClickTracking>
+          </NonLinear>
+        </NonLinearAds>
+      </Creative>
+      <Creative id="111" adId="vauxhall" sequence="1">
+      <CompanionAds required="any">
+      <Companion id="1" width="100" height="100" assetWidth="90" assetHeight="150" expandedWidth="150" expandedHeight="180" apiFramework="companion" adSlotId="2">
+            <StaticResource creativeType="image/png"><![CDATA[https://demo.yospace.com/wf/SDK/assets/overlay_blue.png]]></StaticResource>
+            <IFrameResource><![CDATA[http://tracktest.yospace.com/myCompanionIFrame]]></IFrameResource>
+            <HTMLResource><![CDATA[<!DOCTYPE html><html><body><h1>Companion Heading</h1></body></html>]]></HTMLResource>
+            <CompanionClickThrough><![CDATA[http://www.yospace.com]]></CompanionClickThrough>
+            <CompanionClickTracking><![CDATA[http://tracktest.yospace.com?label=CompanionClickTracking&AdID=vauxhall]]></CompanionClickTracking>
+            <AdParameters xmlEncoded="true"><![CDATA[companion Ad Parameters]]></AdParameters>
+            <AltText>Mouseover Text</AltText>
+            <TrackingEvents>
+    	       <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=companionTracking1&AdID=vauxhall]]></Tracking>
+    	       <Tracking event="creativeView"><![CDATA[http://tracktest.yospace.com?label=creativeView&id=companionTracking2&AdID=vauxhall]]></Tracking>
+            </TrackingEvents>
+         </Companion>
+      </CompanionAds>
+      </Creative>
+    </Creatives>
+    <Extensions>
+      <Extension type="FreeWheel">
+        <CreativeParameters>
+          <CreativeParameter creativeId="333" name="moat" type="Linear"><![CDATA[174057;174057;606595;19447647;19447651;;19447657;22898;g9898464;g215943;208888;91427938;63879/001;2797385;7386222;10;midroll;;174057:yospace_video_live;cpx-non;1499869727461935002]]>
+        </CreativeParameter>
+      </CreativeParameters>
+      </Extension>
+      <Extension type="com.yospace.wrapperhierarchy">
+         <AdWrapper id="vauxhall_grandparent" creativeId="444" AdSystem="WrapperTron">
+           <AdWrapper id="vauxhall_parent" creativeId="333" AdSystem="3rdPartyAdSystem">
+             <AdWrapper id="vauxhall" creativeId="111" AdSystem="InlineAdsRUs"/>
+           </AdWrapper>
+         </AdWrapper>
+      </Extension>
+    </Extensions>
+  </InLine>
+</Ad>
+</VAST>
